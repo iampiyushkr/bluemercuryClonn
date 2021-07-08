@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   <script src="https://kit.fontawesome.com/8640696f0c.js" crossorigin="anonymous"></script>
+
+    <title>LandingPage </title>
+
+    <style>
+       @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .header-list{
+        height: 30px;
+        width: 700px;
+        float: right;
+        margin-right: 200px;
+      }
+
+      .header-list-menu{
+        width: 450px;
+        height: 100%;
+        float: right;
+        font-size: 16px;
+        cursor: pointer;
+        
+        
+      }
+
+      .header-list-menu i{
+        padding-left: 20px;
+        color: rgb(94,118,155);
+        word-spacing: 5px;
+      }
+     
+      .mySlides {
+        display: none;
+        cursor: pointer;
+      }
+      .myslides2 {
+        display: none;
+      }
+      .mySlides img {
+        vertical-align: middle;
+      }
+      .myslides2 img {
+        vertical-align: middle;
+      }
+
+      
+      .slideshow-container {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+      }
+      .smartsuncare-div2{
+        width: 100%;
+        position: relative;
+        margin: auto;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      
+      .open-button {
+        background-color: blue;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 100px;
+        margin-right: -25px;
+        border-radius: 20px;
+        display: none;
+      }
+
+      
+      .chat-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 10px solid #f1f1f1;
+        z-index: 9;
+      }
+
+      
+      .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+      }
+
+     
+      .form-container textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 200px;
+      }
+
+     
+      .form-container textarea:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      
+      .form-container .btn {
+        background-color: #04aa6d;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        opacity: 0.8;
+      }
+
+      
+      .form-container .cancel {
+        background-color: red;
+      }
+
+      
+      .form-container .btn:hover,
+      .open-button:hover {
+        opacity: 1;
+      }
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev:hover,.next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0px  5px;
+        background-color: white;
+        border: 0.5px solid black;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+      }
+      .dot:first-child {
+        margin-left: 65%;
+      }
+      .active,
+      .dot:hover {
+        background-color: black;
+      }
+
+      .dot1 {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        margin: 20px 2px;
+        background-color: white;
+        border: 0.5px solid black;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .dot1:first-child {
+        margin-left: 25%;
+      }
+      .active {
+        background-color: black;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
+      #bestsellers {
+        text-align: center;
+        letter-spacing: .5px;
+      }
+      .mySlides img {
+        height: 560px;
+      }
+      .image-text {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        text-align: center;
+        font-weight: 300;
+        width: 400px;
+        margin-left: 4%;
+      }
+      .image-text2 {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        text-align: center;
+        font-weight: 300;
+        width: 700px;
+        margin-left: 4%;
+      }
+      .image-text3 {
+        position: absolute;
+        top: 160px;
+        left: 50px;
+        text-align: center;
+        font-weight: 300;
+        width: 400px;
+        margin-left: 4%;
+      }
+       .image-text3 a {
+         text-decoration: none;
+         border-bottom: 2px solid white;
+         font-size: 14px;
+         font-weight: bolder;
+       }
+       .image-text3 h4,.image-text3 h2 {
+         font-weight: lighter;
+       }
+      .image-text h4 {
+        color: #717171;
+        font-weight: lighter;
+      }
+      .image-text a {
+        color: black;
+      }
+      .image-text2 h4 {
+        color: #717171;
+        font-weight: lighter;
+      }
+      .image-text2 a {
+        color: black;
+      }
+      .mySlides-div {
+        width: 200px;
+      }
+      .bestseller-div{
+          width: 80%;
+          margin-left: 10%;
+      }
+      #bestsellers{
+          font-weight: 300;
+          margin-top: 80px;
+          margin-bottom: 30px;
+      }
+      
+      .bestdivinner {
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+        color: black;
+        margin-bottom: 50px;
+      }
+      .bestdivinner img {
+        height: 60%;
+        width: 100%;
+      }
+      .bestdivinner a{
+          text-decoration: none;
+      }
+      .bestdivinner p:last-child {
+        text-decoration: none;
+        line-height: 2px;
+      }
+      .bestdivinner p:nth-child(1){
+          color: black;
+      }
+      #next{
+    float: right;
+    margin-top: 80px;
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 40px;
+
+    }
+        .slick-arrow{
+        color: black;
+        font-size:0px;
+        margin-top:-50px;
+        padding: 0;
+      }
+   
+    .slick-next {
+    margin-right:40px;
+    
+  
+    }
+    .slick-prev {
+    left: -45px;
+}
+    .slick-next, .slick-prev {
+      line-height: 0;
+    position: absolute;
+    top: 40%;
+    display: block;
+    width: 50px;
+    height: 20px;
+    }
+.slick-next:before, .slick-prev:before {
+    font-family: slick;
+    font-size: 50px;
+    line-height: 1;
+    opacity: .75;
+    color: rgb(177, 171, 171);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-track{
+    height: 334px;
+    width: 40vw;
+
+}
+.smartsuncare{
+    width: 100%;
+    height: 613px;
+    background-color: rgb(255,235,159);
+}
+.smartsuncare-div{
+    width:1160px;
+    height: 410px;
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+    }
+    .smartsuncare-div1{
+        width:40%;
+        margin-left: 10%;
+    }
+    .smartsuncare-div1 img{
+        width: 100%;
+        height: 100%;
+    }
+    .smartsuncare-div:first-child{
+        margin-left: 10%;
+        margin-right: 10px;
+    }
+    .smartsuncare-div:last-child{
+        margin-right: 10%;
+    }
+    .navbar{
+        position: sticky;
+        top: 0px;
+        width: 100%;
+        margin: auto;
+        padding-bottom:20px ;
+        padding-top:20px ;
+        overflow: visible;
+    }
+    .navbar li{
+        display: inline-block;
+        margin-left: 50px;
+    }
+    .navbar li a{
+        text-decoration: none;
+        color: black;
+    }
+    .navbar-image{
+        width: 453px;
+        height: 50px;
+        margin: auto;
+        padding-top: 0px;
+    }
+    .navbar-image img{
+        width: 208px;
+        height: 50px;
+        margin-left: 25%;
+    }
+    #navbar-div{
+        height: 100%;
+        width: 48%;
+        margin: auto;
+    }
+    #navbar-div li > a{
+        color: rgb(104, 113, 128);
+    }
+    #navbar-div li > a:hover{
+        color: black;
+    }
+    .smartsuncare-div2 img{
+        width: 200px;
+        height: 200px;
+
+    }
+    .smartsuncare-div2{
+        margin-left: 30px;
+        width: 36%;
+        height: 410px;
+        background-color: white;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 10px;
+    }
+    .smartsuncare-div2 p ,.smartsuncare-div2 a{
+        color: grey;
+        text-decoration: none;
+    }
+   #smartsuncare-div2-p{
+       color: black;
+   }
+   .shopify-section{
+     width: 100%;
+     height: 580px;
+     display: flex;
+     font-family: "Monsterrat Light", sans-serif;
+     justify-content: center;
+     box-sizing: border-box;
+   }
+   .shopify-section > img{
+     width: 660px;
+     height: 515px;
+     
+   }
+   .shopify-section > img:hover{
+     cursor: pointer;
+   }
+   .shopify-section_inner{
+     margin: 100px;
+     width: 660px;
+     height: 292.1px;
+     padding: 40px 60px;
+     margin-left: 18px;
+   }
+
+   .aquadiv{
+     width: 99vw;
+     height: 613px;
+     background-color: rgb(249,255,234);
+   }
+   .aquadiv_image{
+     display: flex  ;
+     width:   410px;
+     height: 410px;
+   }
+   .aquadiv__div{
+     width: 410px;
+     margin-left: 30px;
+     background-color: white;
+     padding: 50px 80px;
+     text-align: center;
+     text-decoration: none;
+   }
+   .aquadiv__div  img{
+    width: 200px;
+    height: 200px;
+   }
+   .aquadiv_div{
+     width: 820px;
+     height: 410px;
+     margin: auto;
+   }
+
+   .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 100; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 70%;
+        height: 60%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: animatetop;
+        animation-duration: 0.5s;
+      }
+
+      /* Add Animation */
+
+      @keyframes animatetop {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0px;
+          opacity: 1;
+        }
+      }
+
+      /* The Close Button */
+      .close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        cursor: pointer;
+      }
+
+      .modal-header {
+        padding:20px 16px;
+      }
+
+      .modal-body {
+        padding: 2px 16px;
+      }
+
+      .modal-footer {
+        padding: 2px 16px;
+      }
+
+
+      /* ------navabr------ */
+      .navbar-div{
+        height: 50px;
+        margin: auto;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        z-index: 10;
+        width: 99%;
+        margin-top: 30px;
+      }
+      .navbar{
+        width: 850px;
+      }
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: rgb(94,118,155);
+        text-align: center;
+        text-decoration: none;
+      }
+      .dropdown {
+        float: left;
+        margin-right: 40px;
+      }
+     
+
+      .dropdown .dropbtn {
+        font-size: 14px;
+        border: none;
+        outline: none;
+        color: rgb(94,118,155);
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      .dropbtn:hover{
+        border-bottom: 2px solid rgb(94,118,155) ;
+        font-weight: bolder;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        text-decoration: grey;
+      }
+      .dropdown-content-div{
+        display: none;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 800px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        height: 400px;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: rgb(94,118,155);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: white;
+        color: rgb(27,48,83);
+        font-weight: bolder;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .slidediv{
+        width: 98.5vw;
+        height: 36px;
+        background-color: rgb(215,235,242);
+      }
+
+      i span{
+        margin-left: 10px;
+        font-size: 11px;
+        display: inline-block;
+        letter-spacing: 1.5px;
+      }
+
+      .thinhair{
+        width: 1440px;
+        height: 535px;
+        margin: auto;
+        margin-top: 3.6%;
+      }
+      .inner-thinhair1{
+        width: 48%;
+        margin-right: 3%;
+        float: left;
+
+      }
+      .inner-thinhair2{
+        width: 48%;
+        margin-right: 0%;
+        float: left;
+
+      }
+      .inner-thinhair1 img,.inner-thinhair2 img{
+        height: 398px;
+        width: 100%;
+      }
+
+
+      /* -------thredivlast of the screen-------- */
+      .threedivs{
+        width: 1440px;
+        height: 541px;
+        margin: auto;
+      }
+      .threediv1{
+        width: 31%;
+        height:100%;
+        float: left;
+        text-align: center;
+        margin: 1%;
+      }
+      .threediv1 img{
+        height: 398px;
+        width: 100%;
+      }
+      .slideshow{
+        width: 100%;
+        overflow: hidden;
+
+      }
+      #slideh{
+        font-size: 10px;
+        text-align: center;
+        font-weight: lighter;
+        padding-top: 10px;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+        animation:slide-right 8s infinite;
+        animation-delay: 0s;
+        
+      }
+
+      @keyframes slide-right {
+        from{
+          margin-right:-100%;
+        }
+        to{
+          margin-right: 1600px;
+        }
+      }
+
+
+
+      /* ------footer------ */
+       #footer{
+        width:1900px;
+        height:300px;
+        padding:35px 44px 50px;
+        font-family: 'Montserrat', sans-serif;
+        color:#12284c;
+        
+    }
+    #f_cont{
+        width:1260px;
+        height:250px;
+        margin:auto;
+        display: flex;
+    }
+    #f_cont input{
+        border:0;
+        outline-style: none;
+    }
+    #f_cont input::placeholder{
+        font-size: 15px;
+        color:grey;
+        font-weight: 300;
+        letter-spacing: .2px;
+        font-family: 'Montserrat',sans-serif;
+    }
+    #f_cont>div:nth-child(1){
+        width:300px;
+        background-color:white
+    }
+    #f_cont>div:nth-child(1)>p:nth-child(1){
+        line-height: 24px;
+        letter-spacing: .2px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    #f_cont>div:nth-child(1)>p:nth-child(3){
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: .2px;
+        width:270px;
+        margin-top: 20px
+    }
+    #icons{
+        display: flex;
+        width: 250px;
+        height:25px;
+        justify-content: space-between;
+        margin-top: 19px;
+    }
+    #f_cont>div:nth-child(1)>p:nth-child(5){
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0;
+        margin-top: 20px;
+    }
+    #f_cont>div:nth-child(1)>div:nth-child(2){
+        width:260px;
+        height:30px;
+        border-bottom: 1px solid black;
+        margin-top: 18px;
+    }
+    #f_cont>div:nth-child(2){
+        display: flex;
+        justify-content:space-between;
+        font-size: 12px;
+        margin-left: 100px;
+    }
+    #f_cont>div:nth-child(2) div{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding-top: 10px;
+        width:250px
+    }
+    .fh{
+        font-size:14px;
+        margin-bottom: 15px;
+    }
+
+
+     .modal-body {
+        margin: 3%;
+        display: grid;
+        gap: 6%;
+        grid-template-columns: 20% 20% 20% 20%;
+        row-gap: 9%;
+        margin-left: 6%;
+        
+      }
+      .innerdiv{
+        border: 1px solid black;
+        text-align: center;
+      }
+     
+     
+    </style>
+  </head>
+  <body>
+    <!-- ----------header----------- -->
+    <div class="header-list">
+      <div class="header-list-menu">
+        <i class="far fa-heart" id="myBtn" style="word-spacing: 10px;"><span>WHISLIST</span></i>
+        <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+        <i class="far fa-user-circle" onclick="signup1()" id="signup"><span>PROFILE</span></i>
+        <i class="fas fa-shopping-bag" onclick="bag1()"><span>BAG</span></i>
+      </div>
+    </div>
+
+
+    <!-- -------------Modal----------- -->
+
+    
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal" >
+      <!-- Modal content -->
+      <div class="modal-content" style="overflow: scroll;">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Whislist</h2>
+          <hr/>
+        </div>
+        <div class="modal-body" >
+         
+        </div>
+      </div>
+    </div>
+
+
+
+      <div class="navbar-image"style="padding-top: 30px">
+          <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421"/>
+      </div>
+    
+
+      <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            SHOP
+          </button>
+          <div class="dropdown-content">
+           <div style="width: 50%;float: left;">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>  
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%;float: left;line-height: 10px;">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="new1()">
+            NEW!
+          </button>
+         
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="brands()">
+             BRANDS
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            WELLNESS
+          </button>
+          <div class="dropdown-content">
+            <div style="width: 50%;float: left;">
+             <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>  
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%;float: left;line-height: 10px;">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="explore()">
+            EXPLORE
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="events()">
+            EVENTS
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="bluewards()">
+            BLUEWARDS
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="slidediv">
+      <h2 id="slideh"></h2>
+    </div>
+    
+
+
+    <!---------------slideshow------------- -->
+    <div class="slideshow-container">
+      <div class="mySlides fade"  style="color: white;">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/m61-hydraboost-grad-tan-serum-hero-des.jpg?v=1622742722"
+          style="width: 100%"
+        />
+        <div class="image-text3">
+          <h3>NEW!</h3>
+          <h2 style="font-size: 60px;line-height: 10px;font-weight: 600;" >Tan + Tone</h2>
+          <h4 style="color: white;">
+            Introducing M-16 gradual Tan Serum,an easy new way to get strak-free , sun free glow!
+          </h4>
+          <a href="#" style="color: white;;">SHOP NOW</a>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/summer-beauty-update-hero-des.jpg?v=1622146696"
+          style="width: 100%"
+        />
+        <div class="image-text">
+          <h3>Summer Beauty</h3>
+          <h2>HEY, HOT STUFF!</h2>
+          <h4>
+            THE Sunny , sandy, (and sweaty) season is almost here.Don't dorget
+            to stock up our beauty Experts
+          </h4>
+          <a href="#">SHOP NOW</a>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/m61-glow-getters-hero-des.jpg?v=1622145570"
+          style="width: 100%"
+        />
+        <div class="image-text">
+          <h3>1 SOLD EVERY SECONDS!</h3>
+          <h2>FREE GLOW GETTERS</h2>
+          <h4>Try the cult favorites on us!</h4>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/NoblePanacea-hp-hero-des.jpg?v=1622047390"
+          style="width: 100%"
+        />
+        <div class="image-text2">
+          <h2>NOBLE PANECEA</h2>
+          <h1>SKINCARE SCIENCE MASTERPIECE</h1>
+          <h4>
+            Empower authentic beauty with two purely powrful collections for
+            unparrallel results in rejuvented , radiant skin
+          </h4>
+          <a href="#">SHOP NOW</a>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">
+          Close
+        </button>
+      </form>
+    </div>
+
+
+   
+<!-- ------------bestsellers----------- -->
+    <h2 id="bestsellers">BEST SELLERS</h2>
+    <div class="bestseller-div">
+      <div class="bestdivinner">
+          <a href="./Gental-cleanser.html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3606000463943-1_235x.jpg?v=1622785588"
+        />
+        <p style="color: black;">M_16</p>
+        <a href="#" style="color: grey;">PowerGlow Peel</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a href="./Luna-3.html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-7350092139151-1_235x.jpg?v=1620672226"
+        />
+        <p style="color: black;">The Light Sallon</p>
+        <a href="#" style="color: grey;">Boost LED Mask</a>
+        <p style="color: grey;font-weight:lighter">$45</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a href="./facial-Scrub.html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-title-defaulttitle-817237014072-1_235x.jpg?v=1622785227"
+        />
+        <p style="color: black;">Lune Aster</p>
+        <a href="#" style="color: grey;">Tip Lip Balm</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a href="./Radiance.html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-813269022986-1_235x.jpg?v=1620674244"
+        />
+        <p style="color: black;">M_61</p>
+        <a href="#" style="color: grey;">PowerGlow Peel Extra Strength</a>
+        <p style="color: grey;font-weight:lighter">$36</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a href="./Luna-3.html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_235x.jpg?v=1622784962"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$40</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a href="./Hydraboost (4).html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011385-1_235x.jpg?v=1623429137"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$116</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a href="./Sos.html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3380810177572-1_235x.jpg?v=1622611637"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">Phyto Corretive gel</a>
+        <p style="color: grey;font-weight:lighter">$60</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a href="./Vitalclast.html" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011231-1_235x.jpg?v=1622785267"
+        />
+        <p style="color: black;">Phoretin-CF</p>
+        <a href="#" style="color: grey;">Phoretin-CF</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+    </div>
+    
+
+
+    <!-- -------------smartsuncare----------- -->
+    <div class="smartsuncare">
+        <p style="text-align: center;font-size: 30px; font-weight: lighter; padding-top: 20px;">SMART SUNCARE</p>
+        <div class="smartsuncare-div">
+            <div class="smartsuncare-div1">
+                <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/m61-hydraboost-oil-free-sunscreen-spf-40-shop-the-collection_600x.progressive.jpg?v=1619116052">
+            </div>
+            <div class="smartsuncare-div2">
+                <div class="myslides2 fade"  onclick="mymenu()">
+                    <a href="#">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011521-1_600x600_crop_center.jpg?v=1622785216"/>
+                      <p id="smartsuncare-div2-p">M61</p>
+                      <p>Hydra-Boost Oil Free Sunscreen</p>
+                      <a href="thesunnyedit.html">SPF40</a><br>
+                      <a href="thesunnyedit.html">$42</a>
+                      <P style="color: black;">&#9733 &#9733 &#9733 &#9733 &#9733</P>
+                    </a>
+                </div>
+                <div class="myslides2 fade">
+                    <a href="thesunnyedit.html">
+                    <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237010982-1_600x600_crop_center.jpg?v=1622785182"/>
+                    <p id="smartsuncare-div2-p">M61</p>
+                    <p>Hydra-Boost Body Butter</p>
+                    <a href="thesunnyedit.html">Gradual Tan</a><br>
+                    <a href="thesunnyedit.html">From $42</a>
+                    <P style="color: black;">&#9733 &#9733 &#9733 &#9733 &#9734</P>
+                    </a>
+                </div>
+                <div class="myslides2 fade">
+                    <a href="thesunnyedit.html">
+                    <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-30treatments-817237011019-1_600x600_crop_center.jpg?v=1620673273"/>
+                    <p id="smartsuncare-div2-p">M61</p>
+                    <p>Power Glow Peel Gradual Tan</p>
+                    <a href="thesunnyedit.html">SPF40</a><br>
+                    <a href="thesunnyedit.html">From $42</a>
+                    <P style="color: black;">&#9733 &#9733 &#9733 &#9733 &#9734</P>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div style="text-align: center">
+      <span class="dot1" onclick="currentSlides(1)"></span>
+      <span class="dot1" onclick="currentSlides(2)"></span>
+      <span class="dot1" onclick="currentSlides(3)"></span>
+    </div>
+    </div>
+
+
+    <!-- ----------div----------- -->
+<div class="thinhair">
+  <div class="inner-thinhair1">
+    <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/coop-kjaer-weis-side-by-side-2_700x.jpg?v=1623248263"/>
+    <h3 style="font-size: 24px;letter-spacing: 1px;line-height: 29px;font-weight: inherit;">Matte, Naturally</h2>
+    <p style="font-size: 16px;color: grey;line-height: 24px;letter-spacing: 0.4px;font-weight: lighter;">A fresh, hydrating, certified organic and utterly weightless liquid lipstick that'll stay on, comfortably, all day. Available in six flattering shades.</p>
+    <a href="#" style="text-decoration: none;font-weight: bolder;font-size: 14px;color: black;line-height: 29px;letter-spacing: 0.5px;    border-bottom: 2px solid #12284c">SHOP KJAER WEIS</a>
+  </div>
+  <div class="inner-thinhair2">
+    <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/buying-guide-thinning-hair-side-by-side_700x.jpg?v=1623248440"/>
+    <h3 style="font-size: 24px;letter-spacing: 1px;line-height: 29px;font-weight: inherit;">The Guru Guide to Thinning Hair</h2>
+    <p style="font-size: 16px;color: grey;line-height: 24px;letter-spacing: 0.4px;font-weight: lighter;">Our new Guru Guide to thinning hair is here! Get all your hair care questions answered (and even ones you didn't know you had!)</p>
+    <a href="#"style="text-decoration: none;font-weight: bolder;font-size: 14px;color: black;line-height: 29px;letter-spacing: 0.5px;    border-bottom: 2px solid #12284c">EXPLORE</a>
+  </div>
+</div>
+
+
+
+
+<!-- --------------newarrivals--------- -->
+   <h2 id="bestsellers">BEST SELLERS</h2>
+    <div class="bestseller-div">
+      <div class="bestdivinner">
+          <a onclick="gentle()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3606000463943-1_235x.jpg?v=1622785588"
+        />
+        <p style="color: black;">M_16</p>
+        <a href="#" style="color: grey;">PowerGlow Peel</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="luna()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-7350092139151-1_235x.jpg?v=1620672226"
+        />
+        <p style="color: black;">The Light Sallon</p>
+        <a href="#" style="color: grey;">Boost LED Mask</a>
+        <p style="color: grey;font-weight:lighter">$45</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="facialscrub()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-title-defaulttitle-817237014072-1_235x.jpg?v=1622785227"
+        />
+        <p style="color: black;">Lune Aster</p>
+        <a href="#" style="color: grey;">Tip Lip Balm</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick='radiance()' >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-813269022986-1_235x.jpg?v=1620674244"
+        />
+        <p style="color: black;">M_61</p>
+        <a href="#" style="color: grey;">PowerGlow Peel Extra Strength</a>
+        <p style="color: grey;font-weight:lighter">$36</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="lunaster()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_235x.jpg?v=1622784962"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$40</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="hydraboost()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011385-1_235x.jpg?v=1623429137"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$116</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="clarins()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3380810177572-1_235x.jpg?v=1622611637"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">Phyto Corretive gel</a>
+        <p style="color: grey;font-weight:lighter">$60</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="vitablast()">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011231-1_235x.jpg?v=1622785267"
+        />
+        <p style="color: black;">Phoretin-CF</p>
+        <a href="#" style="color: grey;">Phoretin-CF</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- -----------Shopify--------- -->
+    <div class="shopify-section">
+      <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/lilahb-hp-tabbed-content_1000x.jpg?v=1623168199"/>
+      <div class="shopify-section_inner">
+        <div>
+          <h3 style="font-size: 16px;"> LILAH B.</h3>
+          <h2 style="font-size: 24px;">Lovingly Lip™ Treatment Oil</h2>
+          <p style="color: #717171;font-size: 16px;">Our thoughtful recipe for healthy, hydrated, defined lips includes the multipurpose power of Hyaluronic Acid, Milk Thistle, and Bilberry Seed Oil.</p>
+          <a href="#" style="font-size: 14px; color: black;">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+<!-- -------------beauty experts picks------------- -->
+    <h2 id="bestsellers">BEST SELLERS</h2>
+    <div class="bestseller-div">
+      <div class="bestdivinner">
+          <a onclick="gentle()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3606000463943-1_235x.jpg?v=1622785588"
+        />
+        <p style="color: black;">M_16</p>
+        <a href="#" style="color: grey;">PowerGlow Peel</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="luna()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-7350092139151-1_235x.jpg?v=1620672226"
+        />
+        <p style="color: black;">The Light Sallon</p>
+        <a href="#" style="color: grey;">Boost LED Mask</a>
+        <p style="color: grey;font-weight:lighter">$45</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="facialscrub()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-title-defaulttitle-817237014072-1_235x.jpg?v=1622785227"
+        />
+        <p style="color: black;">Lune Aster</p>
+        <a href="#" style="color: grey;">Tip Lip Balm</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick='radiance()' >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-813269022986-1_235x.jpg?v=1620674244"
+        />
+        <p style="color: black;">M_61</p>
+        <a href="#" style="color: grey;">PowerGlow Peel Extra Strength</a>
+        <p style="color: grey;font-weight:lighter">$36</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="lunaster()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_235x.jpg?v=1622784962"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$40</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="hydraboost()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011385-1_235x.jpg?v=1623429137"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$116</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="clarins()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3380810177572-1_235x.jpg?v=1622611637"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">Phyto Corretive gel</a>
+        <p style="color: grey;font-weight:lighter">$60</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="vitablast()">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011231-1_235x.jpg?v=1622785267"
+        />
+        <p style="color: black;">Phoretin-CF</p>
+        <a href="#" style="color: grey;">Phoretin-CF</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+    </div>
+
+
+
+
+<!-- ----------aquadiv---------- -->
+    <div class="aquadiv">
+      <h2 style="text-align: center; padding-bottom: 20px;padding-top: 20px; font-weight: lighter;">ACQUA DI PARMA</h2>
+      <div class="aquadiv_div">
+        <div class="aquadiv_image">
+          <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/ADP_BLUEMERCURY_600x.progressive.jpg?v=1622756237"/>
+          <div class="aquadiv__div">
+                     
+                        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-100ml-8028713280023-1_600x600_crop_center.jpg?v=1620673970"/>
+                        <p style="letter-spacing: 1px;"> Acqua Di Parma</p>
+                        <div style="width: 250px;"><p style="font-size: 14px; color: rgb(94,118,155); letter-spacing: 1px;">Coloia Futura Eau De Cologne</p></div>
+                        <a href="thesunnyedit.html" style="text-decoration: none;color:rgb(94,118,155) ;">From $42</a>
+                      
+                  </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- ---------camaouflage----------- -->
+    <div class="shopify-section" style="margin-top: 4%;">
+      <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/coop-furtuna-tabbed-content_1000x.jpg?v=1622048462"/>
+      <div class="shopify-section_inner">
+        <div>
+          <h3 style="font-size: 16px;letter-spacing: 1px;">BLUEMERCURY EXCLUSIVE</h3>
+          <h2 style="font-size: 24px;">Furtuna Skin Obsidian Gua Sha</h2>
+          <p style="color: #717171;font-size: 16px;color:grey ;">Recovery ritual to visibly smooth fine lines, minimize the appearance of puffiness, reduce built-up toxins, and encourage natural circulation.
+
+</p>
+          <a href="#" style="font-size: 14px; color: black;word-spacing: 2px;font-weight: bolder;">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- --------------SPF MUST HAVE--------------- -->
+     <h2 id="bestsellers">BEST SELLERS</h2>
+    <div class="bestseller-div">
+      <div class="bestdivinner">
+          <a onclick="gentle()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3606000463943-1_235x.jpg?v=1622785588"
+        />
+        <p style="color: black;">M_16</p>
+        <a href="#" style="color: grey;">PowerGlow Peel</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="luna()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-7350092139151-1_235x.jpg?v=1620672226"
+        />
+        <p style="color: black;">The Light Sallon</p>
+        <a href="#" style="color: grey;">Boost LED Mask</a>
+        <p style="color: grey;font-weight:lighter">$45</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="facialscrub()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-title-defaulttitle-817237014072-1_235x.jpg?v=1622785227"
+        />
+        <p style="color: black;">Lune Aster</p>
+        <a href="#" style="color: grey;">Tip Lip Balm</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick='radiance()' >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-813269022986-1_235x.jpg?v=1620674244"
+        />
+        <p style="color: black;">M_61</p>
+        <a href="#" style="color: grey;">PowerGlow Peel Extra Strength</a>
+        <p style="color: grey;font-weight:lighter">$36</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="lunaster()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_235x.jpg?v=1622784962"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$40</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="hydraboost()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011385-1_235x.jpg?v=1623429137"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">silymarine CF</a>
+        <p style="color: grey;font-weight:lighter">$116</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="clarins()" >
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3380810177572-1_235x.jpg?v=1622611637"
+        />
+        <p style="color: black;">SKINCEUTICALS</p>
+        <a href="#" style="color: grey;">Phyto Corretive gel</a>
+        <p style="color: grey;font-weight:lighter">$60</p>
+        </a>
+      </div>
+      <div class="bestdivinner">
+           <a onclick="vitablast()">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011231-1_235x.jpg?v=1622785267"
+        />
+        <p style="color: black;">Phoretin-CF</p>
+        <a href="#" style="color: grey;">Phoretin-CF</a>
+        <p style="color: grey;font-weight:lighter">$30</p>
+        </a>
+      </div>
+    </div>
+
+
+
+
+    <!-- ------------marla june hotlist----------- -->
+    <div class="shopify-section" style="margin-top: 0%;">
+      <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/marlas-hotlist-june-2021-tabbed-content_1000x.jpg?v=1622042499"/>
+      <div class="shopify-section_inner">
+        <div>
+          <h3 style="font-size: 16px;letter-spacing: 1px;padding: -5.2px 0px 5px;">MARLA'S JUNE HOTLIST</h3>
+          <h2 style="font-size: 24px;">My Summer Essentials
+</h2>
+          <p style="color: #717171;font-size: 16px;color:grey ;">"Say hello to summer by stocking up on sunscreen, bronzer and other warm-weather essentials!"
+
+</p>
+          <h3 style="color: grey;word-spacing: 2px;">-Marla Beck,<span style="font-weight: lighter;font-size: 16px;color: grey;letter-spacing: 1.5px;">Founder & CEO</span> </h3>
+          <a href="#" style="font-size: 14px; color: black;word-spacing: 2px;font-weight: bolder;">EXPLORE</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- -----------threedivs--------- -->
+    <div class="threedivs">
+      <div class="threediv1">
+        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/samples-content_block_600x.jpg?v=1604551537"/>
+        <h3 style="font-size: 14px;font-weight: bolder;padding-left: 5%">FREE GIFTS WITH PURCHASE</h3>
+        <p style="font-size: 14px;color: grey;padding-left: 5%;padding-right: 5%;">Stock up all your favorites brands and start purchsing with us </p>
+        <a href="#" style="font-weight: bolder;font-size: 14px;color: black;">BROWSE NOW</a>
+      </div>
+      <div class="threediv2">
+        <div class="threediv1">
+        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/curbside-hp-content_block_600x.jpg?v=1596135342"/>
+        <h3 style="font-size: 14px;font-weight: bolder;padding-left: 5%">SHOP SAFELY IN STORE</h3>
+        <p style="font-size: 14px;color: grey;padding-left: 5%;padding-right: 5%;">In shop safety curbside pickup or complimentary ship at home </p>
+        <a href="#" style="font-weight: bolder;font-size: 14px;color: black;">LEARN MORE</a>
+      </div>
+      </div>
+      <div class="threediv3">
+        <div class="threediv1">
+        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/fragrance-consultation-content_block_087f6b13-691d-40e0-ba63-c7c4b5365e71_600x.jpg?v=1611351115"/>
+        <h3 style="font-size: 14px;font-weight: bolder;padding-left: 5%">SCENT SPECIAL</h3>
+        <p style="font-size: 14px;color: grey;padding-left: 5%;padding-right: 5%;">Scedule a personnel consultation and get a free perfume </p>
+        <a href="#" style="font-weight: bolder;font-size: 14px;color: black;">FIND YOUR STORE</a>
+      </div>
+      </div>
+    </div>
+
+
+
+
+<div style="width: 99%;height: 1px;background-color: #c4c4c4;margin: auto;margin-top: 30px;"></div>
+    <!-- -----------footer-------- -->
+    
+    <div id="footer">
+        <div id="f_cont" style="letter-spacing: 0.5px;color: rgb(173,163,171);">
+            <div>
+                <p>Get Expert Beauty Insight & Offers</p>
+                <div>
+                    <input type="text" placeholder="EMAIL ADDRESS &#8594;">
+                </div>
+                <p>To  learn more about  how we use your information and your rights, see  <span style="text-decoration: underline;">Privacy Note</span></p>
+                <div id="icons">
+                    <img src="https://img.icons8.com/metro/452/twitter.png" alt="">
+                    <img src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png" alt="">
+                    <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png" alt="">
+                    <img src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg" alt="">
+                    <img src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png" alt="">
+                </div>
+                <p>Copyright 2021 bluemercury.All Right Reserved</p>
+            </div>
+            <div>
+                <div>
+                    <div class="fh">BLUEMERCURY</div>
+                    <div>Our Company</div>
+                    <div>Store Locator</div>
+                    <div>In-Store & Online Events</div>
+                    <div>Press</div>
+                    <div>Careers</div>
+                    <div>Vendor Submissions</div>
+                    <div>Diversity & Inclusion</div>
+                </div>
+                <div>                   
+                    <div class="fh">MY ACCOUNT</div>
+                    <div>My Account</div>
+                    <div>BlueRewards</div>
+                    <div>Gift Card Balance Checker</div>
+                </div>
+                <div>                    
+                    <div class="fh">CUSTOMER SERVICE</div>
+                    <div>Contact Us</div>
+                    <div>Help & FAQ</div>
+                    <div>Shipping,Return & Exchanges</div>
+                    <div>Gift Cards</div>
+                    <div>Offers & Promotions</div>
+                    <div>Kiarna</div>
+                </div>
+                <div>
+                    <div class="fh">Resources</div>
+                    <div>Terms & Conditions</div>
+                    <div>Privacy Policy</div>
+                    <div>Accessibility</div>
+                    <div>COVID-19 Updates</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+      $('.bestseller-div').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
+    </script>
+  <script>
+      $('.bestseller-div').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
+    </script>
+    </html>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+      var slideIndex1 = 1;
+      showSlides1(slideIndex1);
+     
+      function currentSlides(n) {
+        showSlides1((slideIndex1 = n));
+      }
+
+      function showSlides1(n) {
+        let i;
+        let slides = document.getElementsByClassName("myslides2");
+        let dots = document.getElementsByClassName("dot1");
+        if (n > slides.length) {
+          slideIndex1 = 1;
+        }
+        if (n < 1) {
+          slideIndex1 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex1 - 1].style.display = "block";
+        dots[slideIndex1 - 1].className += " active";
+      }
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+
+      // --------------modal-------------
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      function signup(){
+        window.location.href = "./loginPage.html"
+      }
+
+      var slidediv = document.querySelector('.slideshow')
+      var head = document.getElementById('slideh')
+      function slidehead (){
+        const arr = ['FREE SAMPLE WITH ALL ORDERS', 'SHOP NOW PAY LATER WITH KLARNA', 'FREE SHIPPING FOR BLUEWARDS MEMBERS','FREE GIFTS WITH PURCHASE BROWSE NOW']
+        let i = 0;
+        setInterval(function () {
+
+        if (i == arr.length) {
+            i = 0;
+         }
+        head.innerHTML = arr[i]
+        i++
+        }, 8000)
+      }
+      slidehead()
+
+
+
+      function mymenu(){
+        alert(event.target.src)
+      }
+
+
+      function bluewards(){
+        window.location.href = "./explore.html"
+      }
+      function events(){
+        window.location.href = "./events.html"
+      }
+      function explore(){
+        window.location.href = "./explore.html"
+      }
+      function new1(){
+        window.location.href = "./shop_All.html"
+      }
+      function brands(){
+        window.location.href = "./brands.html"
+      }
+
+       let data = JSON.parse(localStorage.getItem("whislist"));
+
+  data.forEach(function (el) {
+    let parent = document.querySelector(".modal-body");
+
+    var div = document.createElement("div");
+    div.setAttribute("onclick", `product$()`);
+    div.style.cursor = "pointer";
+    div.setAttribute("class" , "innerdiv")
+
+
+
+    var img2 = document.createElement("img");
+    img2.style.width = "95%";
+    img2.style.height = "60%";
+    img2.src = el.Image;
+    var p = document.createElement("p");
+    p.innerHTML = `${el.Name1}`;
+    var p1 = document.createElement("p");
+    p1.innerHTML = `${el.Name2}`;
+    var p2 = document.createElement("p");
+    p2.innerHTML = "$" + `${el.Price}`;
+     var button = document.createElement("button");
+    button.innerText = "ADD TO BAG";
+    button.style.backgroundColor = "rgb(94, 118, 155)";
+    button.style.width = "100%";
+    button.style.height = "50px";
+    button.style.textAlign = "center";
+    button.style.color = "white";
+
+    div.append(img2, p, p1, p2,button);
+    parent.append(div);
+  });
+
+function luna(){
+  window.location.href = "./Luna-3.html"
+}
+function radiance(){
+  window.location.href = "./Radiance.html"
+}
+function facialscrub(){
+  window.location.href = "./facial-Scrub.html"
+}
+function gentle(){
+  window.location.href = "./Gental-cleanser.html"
+}
+function lunaster(){
+  window.location.href = "./5-min-Rescue.html"
+}
+function hydraboost(){
+  window.location.href = "./Hydraboost (4).html"
+}
+function clarins(){
+  window.location.href = "./Sos.html"
+}
+function vitablast(){
+  window.location.href = "./Vitalclast.html"
+}
+
+function bag1(){
+    window.location.href = "./view-bag.html"
+}
+  </script>
+</html>

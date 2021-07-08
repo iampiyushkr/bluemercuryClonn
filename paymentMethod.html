@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/8640696f0c.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: Montserrat Regular, sans-serif;
+        font-weight: lighter;
+      }
+
+      #mainDiv {
+        width: 100%;
+
+        margin: auto;
+        display: flex;
+      }
+
+      #leftDiv {
+        width: 50%;
+
+        margin-left: 100px;
+      }
+
+      #imgDiv {
+        width: 90%;
+        height: 80px;
+        text-align: center;
+
+        margin: auto;
+        cursor: pointer;
+      }
+
+      #imgDiv > img {
+        width: 45%;
+        margin-top: 20px;
+      }
+
+      #headerDiv {
+        width: 90%;
+
+        margin: auto;
+        font-size: 0.8571428571em;
+        color: gray;
+        display: flex;
+      }
+
+      #headerDiv > p:nth-child(1) {
+        margin-left: 80px;
+      }
+
+      #rightDiv {
+        width: 45%;
+
+        background-color: rgb(248, 248, 248);
+        border-left: 1px solid lightgray;
+      }
+
+      #rightInnerDiv,
+      #rightInnerDiv2,
+      #rightInnerDiv3 {
+        width: 65%;
+        margin-left: 60px;
+        margin-top: 20px;
+      }
+
+      #rightInnerDiv4 {
+        width: 65%;
+        display: flex;
+        margin-left: 60px;
+      }
+
+      #rightInnerDiv img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        border: 1px solid lightgray;
+      }
+
+      .p1 {
+        font-size: 13px;
+        color: grey;
+        margin-top: -10px;
+      }
+
+      .p2 {
+        margin-top: -40px;
+        font-weight: bold;
+        margin-left: 120px;
+        float: right;
+      }
+
+      .span {
+        float: left;
+        margin-top: -69px;
+        background-color: rgb(94, 118, 155);
+        margin-left: -5px;
+        color: white;
+        font-weight: bold;
+        width: 17px;
+        height: 17px;
+        border-radius: 60%;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      #rightInnerDiv3 p,
+      #rightInnerDiv4 p {
+        color: #122841;
+      }
+
+      #rightInnerDiv3 {
+        border-bottom: 1px solid lightgray;
+      }
+
+      mark {
+        background-color: white;
+        font-weight: bold;
+      }
+
+      #leftDiv1 {
+        border: 1px solid lightgray;
+
+        margin: auto;
+        width: 83%;
+      }
+      #leftDiv3,
+      #leftDiv4,
+      #leftDiv5,
+      #leftDiv6,
+      #leftDiv7,
+      #leftDiv8 {
+        border: 1px solid lightgray;
+
+        margin: auto;
+        width: 83%;
+      }
+
+      #bottomDiv {
+        display: flex;
+        margin-top: 80px;
+      }
+
+      #bottomDiv u {
+        font-size: 11px;
+        color: #122841;
+        margin-left: 80px;
+        margin-top: 20px;
+      }
+
+      #bottomDiv button {
+        width: 320px;
+        height: 50px;
+        background-color: #122841;
+        color: white;
+        font-weight: bold;
+        margin-left: 100px;
+      }
+
+      #firstDiv3 {
+        margin-top: 10px;
+      }
+      #firstDiv3 > div:nth-child(1) {
+        display: flex;
+        cursor: pointer;
+      }
+      #firstDiv3 > div:nth-child(2) {
+        display: flex;
+        float: right;
+        margin-top: -30px;
+        margin-right: 10px;
+      }
+      #firstDiv3 > div:nth-child(2) > img {
+        height: 20px;
+        width: 30px;
+        margin-right: 5px;
+        border-radius: 3px;
+      }
+      #leftDiv4 {
+        display: none;
+      }
+      #leftDiv6,
+      #leftDiv8 {
+        display: none;
+        height: 300px;
+        text-align: center;
+        background-color: lightgray;
+      }
+
+      .navbar-div {
+        height: 30px;
+        margin: auto;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        z-index: 10;
+        width: 850px;
+        margin-top: 30px;
+      }
+      .navbar {
+        width: 850px;
+      }
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: rgb(94, 118, 155);
+        text-align: center;
+        text-decoration: none;
+      }
+      .dropdown {
+        float: left;
+        overflow: visible;
+        margin-right: 40px;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 14px;
+        border: none;
+        outline: none;
+        color: rgb(94, 118, 155);
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      .dropbtn:hover {
+        border-bottom: 2px solid rgb(94, 118, 155);
+        font-weight: bolder;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        text-decoration: grey;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        height: 400px;
+        width: 1000px;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: rgb(94, 118, 155);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: white;
+        color: rgb(27, 48, 83);
+        font-weight: bolder;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .navbar-image {
+        width: 453px;
+        height: 50px;
+        margin: auto;
+        padding-top: 0px;
+      }
+      .navbar-image img {
+        width: 208px;
+        height: 50px;
+        margin-left: 25%;
+      }
+
+      /* ----modal----- */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 100; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 70%;
+        height: 60%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: animatetop;
+        animation-duration: 0.5s;
+      }
+
+      .close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        cursor: pointer;
+      }
+
+      .modal-header {
+        padding: 20px 16px;
+      }
+
+      .modal-body {
+        padding: 2px 16px;
+      }
+
+      .modal-footer {
+        padding: 2px 16px;
+      }
+
+      /* -------head------- */
+      .header-list {
+        height: 30px;
+        width: 700px;
+        float: right;
+        margin-right: 130px;
+      }
+
+      .header-list-menu {
+        width: 450px;
+        height: 100%;
+        float: right;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .header-list-menu i {
+        padding-left: 20px;
+        color: rgb(94, 118, 155);
+        word-spacing: 5px;
+      }
+
+      .slidediv {
+        width: 98.5vw;
+        height: 36px;
+        background-color: rgb(215, 235, 242);
+      }
+      #slideh {
+        font-size: 10px;
+        text-align: center;
+        font-weight: lighter;
+        padding-top: 10px;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+        animation: slide-right 8s infinite;
+        animation-delay: 2s;
+      }
+
+      @keyframes slide-right {
+        from {
+          margin-right: -100%;
+        }
+        to {
+          margin-right: 1600px;
+        }
+      }
+
+      .modal-body {
+        margin: 3%;
+        display: grid;
+        gap: 6%;
+        grid-template-columns: 20% 20% 20% 20%;
+        row-gap: 9%;
+        margin-left: 6%;
+      }
+
+      .innerdiv {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      /* -------------footer------------ */
+      #footer {
+        width: 1900px;
+        height: 300px;
+        padding: 35px 44px 50px;
+        font-family: "Montserrat", sans-serif;
+        color: #12284c;
+        top: 630px;
+      }
+      #f_cont {
+        width: 1260px;
+        height: 250px;
+        margin: auto;
+        display: flex;
+      }
+      #f_cont input {
+        border: 0;
+        outline-style: none;
+      }
+      #f_cont input::placeholder {
+        font-size: 15px;
+        color: grey;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        font-family: "Montserrat", sans-serif;
+      }
+      #f_cont > div:nth-child(1) {
+        width: 300px;
+        background-color: white;
+      }
+      #f_cont > div:nth-child(1) > p:nth-child(1) {
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      #f_cont > div:nth-child(1) > p:nth-child(3) {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        width: 270px;
+        margin-top: 20px;
+      }
+      #icons {
+        display: flex;
+        width: 250px;
+        height: 25px;
+        justify-content: space-between;
+        margin-top: 19px;
+      }
+      #f_cont > div:nth-child(1) > p:nth-child(5) {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0;
+        margin-top: 20px;
+      }
+      #f_cont > div:nth-child(1) > div:nth-child(2) {
+        width: 260px;
+        height: 30px;
+        border-bottom: 1px solid black;
+        margin-top: 18px;
+      }
+      #f_cont > div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-left: 100px;
+      }
+      #f_cont > div:nth-child(2) div {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding-top: 10px;
+        width: 250px;
+      }
+      .fh {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ----------header----------- -->
+    <div class="header-list">
+      <div
+        class="header-list-menu"
+        style="font-size: 14px; letter-spacing: 1px"
+      >
+        <i class="far fa-heart" id="myBtn" style="word-spacing: 10px"
+          ><span>WHISLIST</span></i
+        >
+        <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+        <i class="far fa-user-circle" onclick="signup()" id="signup"
+          ><span>SIGN/UP</span></i
+        >
+        <i class="fas fa-shopping-bag"><span>BAG</span></i>
+      </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Whislist</h2>
+          <hr />
+        </div>
+        <div class="modal-body"></div>
+        <!-- <div class="modal-footer">
+          <hr />
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421"
+      />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">SHOP</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="new1()">NEW!</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="brands()">BRANDS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">WELLNESS</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="explore()">EXPLORE</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="events()">EVENTS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="bluewards()">BLUEWARDS</button>
+        </div>
+      </div>
+    </div>
+    <div class="slidediv">
+      <h2 id="slideh"></h2>
+    </div>
+
+    <div id="mainDiv">
+      <div id="leftDiv">
+        <div id="imgDiv">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm-checkout-logo.png?61066"
+          />
+        </div>
+        <div id="headerDiv">
+          <p style="cursor: pointer">Cart ></p>
+          <p style="cursor: pointer">
+            Customer information > Shipping method > <mark> method</mark>
+          </p>
+        </div>
+        <p style="margin-left: 70px; color: #122841; font-size: 20px">
+          Contact Information
+        </p>
+        <div id="leftDiv1">
+          <div style="display: flex">
+            <p style="color: #122841; margin-left: 10px">Contact</p>
+            <p style="margin-left: 50px; color: gray" id="emailInfo"></p>
+          </div>
+          <u
+            style="
+              float: right;
+              margin-top: -30px;
+              margin-right: 10px;
+              color: #12284c;
+              cursor: pointer;
+            "
+            >Change</u
+          >
+
+          <hr style="width: 95%; margin-top: -2px; margin-bottom: -2px" />
+          <div style="display: flex">
+            <p style="color: #122841; margin-left: 10px">Ship to</p>
+            <p style="margin-left: 50px; color: gray" id="addressInfo"></p>
+          </div>
+          <u
+            style="
+              float: right;
+              margin-top: -30px;
+              margin-right: 10px;
+              color: #12284c;
+              cursor: pointer;
+            "
+            >Change</u
+          >
+          <hr style="width: 95%; margin-top: -2px; margin-bottom: -2px" />
+          <div style="display: flex">
+            <p style="color: #122841; margin-left: 10px">Method</p>
+            <p
+              style="margin-left: 50px; color: gray; font-size: 15px"
+              id="deliveryInfo"
+            ></p>
+          </div>
+          <u
+            style="
+              float: right;
+              margin-top: -30px;
+              margin-right: 10px;
+              color: #12284c;
+              cursor: pointer;
+            "
+            >Change</u
+          >
+        </div>
+        <p style="margin-left: 70px; color: #122841; font-size: 20px">
+          Payment method
+        </p>
+        <p
+          style="
+            font-size: 10px;
+            color: #12284c;
+            margin-left: 70px;
+            margin-top: -10px;
+          "
+        >
+          JOIN OUR LOYALTY PROGRAM FOR FREE SHIPPING! <u>LEARN MORE</u>
+        </p>
+
+        <div id="leftDiv3">
+          <div id="firstDiv3">
+            <div>
+              <input
+                style="margin-left: 20px; cursor: pointer"
+                type="checkbox"
+                id="input1"
+              />
+              <p style="margin-left: 25px; margin-top: 1px">Credit Card</p>
+            </div>
+            <div>
+              <img
+                src="https://th.bing.com/th/id/OIP.ldAH6_MjHzgin3H1rs2-oQHaCs?w=323&h=127&c=7&o=5&pid=1.7"
+              />
+              <img
+                src="https://th.bing.com/th/id/OIP.D-glNbmdqIOVsA5vEUmPFwHaE8?w=237&h=180&c=7&o=5&pid=1.7"
+              />
+              <img
+                src="https://th.bing.com/th/id/OIP.XRL0w4SJR3mWJef6vaFWlQHaHb?w=188&h=189&c=7&o=5&pid=1.7"
+              />
+              <img
+                src="data:image/jpeg;base64,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"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="leftDiv4">
+          <input
+            id="cardNo"
+            style="
+              width: 90%;
+              height: 40px;
+              margin-left: 20px;
+              cursor: pointer;
+              border: 1px solid lightgray;
+              margin-top: 15px;
+            "
+            type="text"
+            placeholder="Card Number"
+          />
+          <input
+            id="cardName"
+            style="
+              width: 90%;
+              height: 40px;
+              margin-left: 20px;
+              cursor: pointer;
+              border: 1px solid lightgray;
+              margin-top: 15px;
+            "
+            type="text"
+            placeholder="Name on Card"
+          />
+          <div
+            style="
+              margin-bottom: 10px;
+              display: flex;
+              width: 91.5%;
+              height: 40px;
+              margin-left: 20px;
+              margin-top: 15px;
+            "
+          >
+            <input
+              id="ExpirationDate"
+              style="
+                border: 1px solid lightgray;
+                width: 49.5%;
+                height: 40px;
+                cursor: pointer;
+              "
+              placeholder="Expiration Date (MM/DD/YYYY)"
+            />
+            <input
+              style="
+                border: 1px solid lightgray;
+                margin-left: 15px;
+                width: 49.5%;
+                height: 40px;
+                cursor: pointer;
+              "
+              placeholder="Security Code"
+              id="securityCode"
+            />
+          </div>
+        </div>
+        <div id="leftDiv5">
+          <div
+            style="
+              cursor: pointer;
+              display: flex;
+              margin-top: 10px;
+              margin-bottom: 10px;
+            "
+          >
+            <input
+              style="margin-left: 20px; cursor: pointer"
+              type="checkbox"
+              id="input2"
+            />
+            <img
+              style="margin-left: 25px; width: 100px; height: 28px"
+              src="https://th.bing.com/th/id/OIP.gfrqxS-oxm5_C1tO-2kqbwHaBy?w=348&h=84&c=7&o=5&pid=1.7"
+            />
+          </div>
+        </div>
+        <div id="leftDiv6">
+          <img
+            src="https://th.bing.com/th/id/OIP.yVMi3iOr3AxJngkvJav5RQHaHa?w=207&h=208&c=7&o=5&pid=1.7"
+          />
+          <p style="color: gray">
+            After clicking “Complete order”, you will be redirected to PayPal to
+            complete your purchase securely.
+          </p>
+        </div>
+        <div id="leftDiv7">
+          <p style="cursor: pointer; margin-left: 20px">
+            <input id="input3" type="checkbox" />&emsp;BUY NOW, PAY LATER WITH
+            KLARNA
+          </p>
+          <img
+            style="
+              float: right;
+              width: 35px;
+              height: 22px;
+              border-radius: 5px;
+              margin-right: 10px;
+              margin-top: -35px;
+            "
+            src="data:image/jpeg;base64,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"
+          />
+        </div>
+        <div id="leftDiv8">
+          <img
+            src="https://th.bing.com/th/id/OIP.yVMi3iOr3AxJngkvJav5RQHaHa?w=207&h=208&c=7&o=5&pid=1.7"
+          />
+          <p style="color: gray">
+            After clicking “Complete order”, you will be redirected to Buy now,
+            pay later with Klarna to complete your purchase securely.
+          </p>
+        </div>
+        <div id="bottomDiv">
+          <u style="cursor: pointer">RETURN TO information</u>
+          <button style="cursor: pointer" id="shipping">COMPLETE ORDER</button>
+        </div>
+        <hr style="margin-top: 50px; color: lightgray; width: 91%" />
+        <p
+          style="
+            margin-left: 30px;
+            font-size: 13px;
+            color: gray;
+            margin-top: 10px;
+          "
+        >
+          All rights reserved bluemercury
+        </p>
+      </div>
+      <div id="rightDiv">
+        <div id="rightInnerDiv"></div>
+        <div id="rightInnerDiv2">
+          <div style="display: flex">
+            <input
+              style="width: 60%; height: 45px; border: 2px solid #12284c"
+              placeholder="Gift Card/Promocode"
+              id="promo"
+            />
+            <button
+              style="
+                width: 40%;
+                height: 50px;
+                background-color: #12284c;
+                color: white;
+                cursor: pointer;
+              "
+              id="apply"
+            >
+              APPLY
+            </button>
+          </div>
+        </div>
+        <hr
+          style="
+            color: lightgray;
+            margin-top: 20px;
+            width: 65%;
+            margin-right: 140px;
+          "
+        />
+        <div id="rightInnerDiv3">
+          <div style="display: flex">
+            <p>Subtotal</p>
+            <p style="margin-left: 270px" id="totalPrice"></p>
+          </div>
+          <div style="margin-top: -20px">
+            <p>Shipping</p>
+            <p
+              style="
+                font-size: 12px;
+                margin-top: -30px;
+                float: right;
+                margin-right: 10px;
+              "
+              id="inputValue"
+            ></p>
+          </div>
+        </div>
+        <div id="rightInnerDiv4">
+          <p style="font-weight: bold; margin-top: 25px; font-size: 20px">
+            Total
+          </p>
+          <p
+            style="margin-left: 270px; font-weight: 200; font-size: 25px"
+            id="totalPrice1"
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        width: 99%;
+        height: 1px;
+        background-color: #c4c4c4;
+        margin: auto;
+        margin-top: 30px;
+        top: 610px;
+      "
+    ></div>
+
+    <div id="footer" style="height: 300px">
+      <div id="f_cont" style="letter-spacing: 0.5px; color: rgb(173, 163, 171)">
+        <div>
+          <p>Get Expert Beauty Insight & Offers</p>
+          <div>
+            <input type="text" placeholder="EMAIL ADDRESS &#8594;" />
+          </div>
+          <p>
+            To learn more about how we use your information and your rights, see
+            <span style="text-decoration: underline">Privacy Note</span>
+          </p>
+          <div id="icons">
+            <img src="https://img.icons8.com/metro/452/twitter.png" alt="" />
+            <img
+              src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png"
+              alt=""
+            />
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"
+              alt=""
+            />
+            <img
+              src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg"
+              alt=""
+            />
+            <img
+              src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+              alt=""
+            />
+          </div>
+          <p>Copyright 2021 bluemercury.All Right Reserved</p>
+        </div>
+        <div>
+          <div>
+            <div class="fh">BLUEMERCURY</div>
+            <div>Our Company</div>
+            <div>Store Locator</div>
+            <div>In-Store & Online Events</div>
+            <div>Press</div>
+            <div>Careers</div>
+            <div>Vendor Submissions</div>
+            <div>Diversity & Inclusion</div>
+          </div>
+          <div>
+            <div class="fh">MY ACCOUNT</div>
+            <div>My Account</div>
+            <div>BlueRewards</div>
+            <div>Gift Card Balance Checker</div>
+          </div>
+          <div>
+            <div class="fh">CUSTOMER SERVICE</div>
+            <div>Contact Us</div>
+            <div>Help & FAQ</div>
+            <div>Shipping,Return & Exchanges</div>
+            <div>Gift Cards</div>
+            <div>Offers & Promotions</div>
+            <div>Kiarna</div>
+          </div>
+          <div>
+            <div class="fh">Resources</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy Policy</div>
+            <div>Accessibility</div>
+            <div>COVID-19 Updates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let info = JSON.parse(localStorage.getItem("info"));
+  document.getElementById("emailInfo").innerHTML = info[0].Email;
+  document.getElementById("addressInfo").innerHTML =
+    info[0].City + info[0].Address + info[0].Zip;
+
+  let arr = JSON.parse(localStorage.getItem("bag"));
+  console.log(5);
+  var sum = 0;
+  for (i = 0; i < arr.length; i++) {
+    var div = document.createElement("div");
+    div.style.marginTop = 10 + "px";
+    var div1 = document.createElement("div");
+    div1.style.display = "flex";
+    var div2 = document.createElement("div");
+    var img = document.createElement("img");
+    img.src = arr[i].Image;
+    var p = document.createElement("p");
+    p.innerHTML = arr[i].Name1;
+    p.style.fontSize = 15 + "px";
+    p.style.fontWeight = "bold";
+    p.style.color = "#12284c";
+    var p1 = document.createElement("p");
+    p1.innerHTML = arr[i].Name;
+    p1.setAttribute("class", "p1");
+    var p2 = document.createElement("p");
+    p2.innerHTML = "$" + arr[i].Price;
+    p2.setAttribute("class", "p2");
+
+    var span = document.createElement("span");
+    span.innerHTML = arr[i].count;
+    span.setAttribute("class", "span");
+
+    div2.append(p, p1, span);
+    div1.append(img, div2);
+    div.append(div1, p2);
+    document.getElementById("rightInnerDiv").append(div);
+
+    sum += arr[i].count * arr[i].Price;
+  }
+  document.getElementById("totalPrice").innerHTML = "$" + sum;
+  document.getElementById("totalPrice1").innerHTML = "$" + sum;
+
+  function promo() {
+    if (document.getElementById("promo").value == "penten50") {
+      document.getElementById("totalPrice1").innerHTML = "$" + sum * 0.5;
+      document.getElementById("totalPrice").innerHTML = "$" + sum * 0.5;
+      alert("Promo Code Applied");
+    }
+  }
+  document.getElementById("apply").addEventListener("click", promo);
+
+  var z = 0;
+  function CardPayment() {
+    document.getElementById("leftDiv4").style.display = "block";
+    document.getElementById("leftDiv6").style.display = "none";
+    document.getElementById("leftDiv8").style.display = "none";
+    document.getElementById("input2").checked = false;
+    document.getElementById("input1").checked = true;
+    document.getElementById("input3").checked = false;
+  }
+  document.getElementById("input1").addEventListener("click", CardPayment);
+
+  var x = 0;
+  function PayPal() {
+    document.getElementById("leftDiv6").style.display = "block";
+    document.getElementById("leftDiv4").style.display = "none";
+    document.getElementById("leftDiv8").style.display = "none";
+    document.getElementById("input1").checked = false;
+    document.getElementById("input2").checked = true;
+    document.getElementById("input3").checked = false;
+  }
+  document.getElementById("input2").addEventListener("click", PayPal);
+
+  function kalrna() {
+    document.getElementById("leftDiv8").style.display = "block";
+    document.getElementById("leftDiv4").style.display = "none";
+    document.getElementById("leftDiv6").style.display = "none";
+    document.getElementById("input1").checked = false;
+    document.getElementById("input3").checked = true;
+    document.getElementById("input2").checked = false;
+  }
+  document.getElementById("input3").addEventListener("click", kalrna);
+
+  var arr5 = localStorage.getItem("delivery");
+
+  document.getElementById("deliveryInfo").innerHTML = arr5;
+
+  var arr7 = JSON.parse(localStorage.getItem("promo"));
+  var sum1 = sum * arr7[0].pentane50;
+
+  if (arr5[0] == "G") {
+    document.getElementById("inputValue").innerHTML = "Free";
+  }
+  if (arr5[0] == "T") {
+    document.getElementById("inputValue").innerHTML = "$" + 10;
+    document.getElementById("totalPrice1").innerHTML = "$" + (sum1 + 10);
+  }
+  if (arr5[0] == "O") {
+    document.getElementById("inputValue").innerHTML = "$" + 20;
+    document.getElementById("totalPrice1").innerHTML = "$" + (sum1 + 20);
+  }
+
+  function apply() {
+    if (document.getElementById("promo").value.length != 0) {
+      alert("Promo Code Already Applied");
+    }
+  }
+  document.getElementById("apply").addEventListener("click", apply);
+
+  function shipping() {
+    if (document.getElementById("cardNo").value.length == 0) {
+      alert("Enter Card Number");
+    } else {
+      if (document.getElementById("cardName").value.length == 0) {
+        alert("Enter Card Name");
+      } else {
+        if (document.getElementById("ExpirationDate").value.length == 0) {
+          alert("Enter Card Expiration Date");
+        } else {
+          if (document.getElementById("securityCode").value.length == 0) {
+            alert("Enter Card Security Code");
+          } else {
+            alert("Your Order is accepted");
+            window.localStorage.clear();
+          }
+        }
+      }
+    }
+  }
+  document.getElementById("shipping").addEventListener("click", shipping);
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  function signup() {
+    window.location.href = "./loginPage.html";
+  }
+
+  var head = document.getElementById("slideh");
+  function slidehead() {
+    const arr = [
+      "FREE SAMPLE WITH ALL ORDERS",
+      "SHOP NOW PAY LATER WITH KLARNA",
+      "FREE SHIPPING FOR BLUEWARDS MEMBERS",
+      "FREE GIFTS WITH PURCHASE BROWSE NOW",
+    ];
+    let i = 0;
+    setInterval(function () {
+      if (i == arr.length) {
+        i = 0;
+      }
+      head.innerHTML = arr[i];
+      i++;
+    }, 8000);
+  }
+  slidehead();
+
+  function bluewards() {
+    window.location.href = "./explore.html";
+  }
+  function events() {
+    window.location.href = "./explore.html";
+  }
+  function explore() {
+    window.location.href = "./explore.html";
+  }
+
+  let data = JSON.parse(localStorage.getItem("whislist"));
+
+  data.forEach(function (el) {
+    let parent = document.querySelector(".modal-body");
+
+    var div = document.createElement("div");
+    div.setAttribute("onclick", `product$()`);
+    div.style.cursor = "pointer";
+    div.setAttribute("class", "innerdiv");
+
+    var img2 = document.createElement("img");
+    img2.style.width = "95%";
+    img2.style.height = "50%";
+    img2.src = el.Image;
+    var p = document.createElement("p");
+    p.innerHTML = `${el.Name1}`;
+    var p1 = document.createElement("p");
+    p1.innerHTML = `${el.Name2}`;
+    var p2 = document.createElement("p");
+    p2.innerHTML = "$" + `${el.Price}`;
+    var button = document.createElement("button");
+    button.innerText = "ADD TO BAG";
+    button.style.backgroundColor = "rgb(94, 118, 155)";
+    button.style.width = "100%";
+    button.style.height = "50px";
+    button.style.textAlign = "center";
+    button.style.color = "white";
+
+    div.append(img2, p, p1, p2, button);
+    parent.append(div);
+  });
+</script>

@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://kit.fontawesome.com/8640696f0c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <head>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+            body {
+                font-family: "Montserrat", sans-serif;
+            }
+
+            #topDiv {
+                display: flex;
+                margin-left: 150px;
+            }
+
+            #topDiv p {
+                font-size: 16px;
+            }
+
+            #topDiv>p:nth-child(2) {
+                color: #12284c;
+                font-weight: bold;
+            }
+
+            #topDiv>p:nth-child(1) {
+                color: #807c82;
+            }
+
+            #mainContainer {
+                width: 1100px;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+            }
+
+            #smallImages {
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+
+
+            }
+
+            #smallImages img {
+                width: 95px;
+                height: 100px;
+            }
+
+            #container {
+                display: grid;
+                width: 1000px;
+                grid-template-columns: 300px 250px 450px;
+                grid-template-rows: 370px 150px;
+
+            }
+
+            #container>div:nth-child(1) {
+                grid-area: 1/1/3/3;
+
+            }
+
+
+
+            #increase,
+            #decrease {
+                width: 40px;
+                height: 45px;
+            }
+
+            #quantity {
+                width: 40px;
+                height: 38px;
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+
+            #addToBag {
+                width: 270px;
+                height: 45px;
+                margin-left: 10px;
+                background-color: #12284c;
+                color: white;
+                font-weight: bold;
+                border-style: solid;
+                border-color: #12284c;
+            }
+
+            #line {
+                width: 400px;
+                height: 1px;
+                background-color: lightgray;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            #productName>p:nth-child(1) {
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+            #productName>p:nth-child(2) {
+                color: rgb(70, 67, 67);
+                font-size: 26px;
+                margin-top: -5px;
+                margin-bottom: -5px;
+            }
+
+            #productName>p:nth-child(3) {
+                color: gray;
+                font-size: 20px;
+            }
+
+            #productName>p:nth-child(4) {
+                color: gray;
+            }
+
+            #productName>div:nth-child(10) {
+
+                border: 1px solid black;
+                width: 412px;
+                height: 50px;
+                text-align: center;
+                margin-top: 10px;
+
+            }
+
+            #productName>input {
+                text-align: center;
+            }
+
+            #wishList>div p {
+                margin-top: 50px;
+                color: #8d98a9;
+                text-decoration: underline;
+
+            }
+
+            #wishList>div img {
+                width: 25px;
+                height: 25px;
+                margin-bottom: -57px;
+            }
+
+            #wishList>p:nth-child(2) {
+                color: #12284c;
+                margin-left: 10px;
+            }
+
+            #wishList>div {
+                display: flex;
+                flex-direction: row;
+                margin: 5px;
+
+            }
+
+            #showDetailDiv {
+                margin-left: 780px;
+                width: 350px;
+                margin-right: -5px;
+            }
+
+            #showDetailDiv p {
+                color: gray;
+            }
+
+
+            .modal,
+            #modal1 {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 1;
+                /* Sit on top */
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/ opacity */
+            }
+
+            #zoomImg {
+
+                margin-left: 400px;
+                margin-top: 100px;
+                width: 50%;
+                height: 60%;
+            }
+
+
+            .modalContent {
+                width: 450px;
+                height: 100%;
+                float: right;
+                background-color: #f8f8f8;
+                animation-name: animaleft;
+                animation-duration: 1.5s;
+            }
+
+            @keyframes animaleft {
+                from {
+                    right: -300px;
+                    opacity: 0;
+                }
+
+                to {
+                    right: 0px;
+                    opacity: 1;
+                }
+            }
+
+            .modalContent>p:nth-child(1) {
+                margin-left: 50px;
+                font-size: 25px;
+                color: #12284c;
+            }
+
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 32px;
+                font-weight: bold;
+                margin-top: -70px;
+                margin-right: 10px;
+
+            }
+
+            .modalContent>p:nth-child(4) {
+                font-size: 13px;
+                margin-left: 50px;
+                color: #1d4483;
+            }
+
+            #bottomBag {
+                height: 50px;
+                width: 400px;
+                position: fixed;
+                bottom: 0;
+                margin-left: 20px;
+                margin-bottom: 20px;
+                background-color: #12284c;
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            .modalContent>p:nth-child(6) {
+                position: fixed;
+                bottom: 0;
+                color: #1d4483;
+                font-weight: -10;
+                font-size: 15px;
+                margin-bottom: 100px;
+                margin-left: 10px;
+            }
+
+            .modalContent>hr:nth-child(5) {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 150px;
+
+            }
+
+            #productInfo {
+                width: 80%;
+                margin: auto;
+
+            }
+
+            .hr {
+                width: 100%;
+                height: 1px;
+                background-color: lightgray;
+                margin-top: 10px;
+            }
+
+            #productDetail>p:nth-child(1),
+            #ingredient>p:nth-child(1),
+            #howToUse>p:nth-child(1) {
+                color: #12284c;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            #productDetail>p:nth-child(2),
+            #ingredient li,
+            #howToUse>p:nth-child(2) {
+                margin-left: 40px;
+                font-size: 17px;
+                color: #12284c;
+                font-weight: -500px;
+            }
+
+            #ingredient u {
+                margin-left: 20px;
+                color: #12284c;
+            }
+
+            .div2 {
+                float: right;
+                margin-top: 30px
+            }
+
+            .div1 p {
+                margin-left: 20px;
+            }
+
+            .btn3,
+            .Input,
+            .btn4 {
+                width: 50px;
+                height: 50px;
+                font-size: 20px
+            }
+
+            .Input {
+                margin-bottom: -10px
+            }
+
+
+            /* ------footer------ */
+            #footer {
+                width: 1900px;
+                height: 300px;
+                padding: 35px 44px 50px;
+                font-family: 'Montserrat', sans-serif;
+                color: #12284c;
+                margin-left: -330px;
+
+            }
+
+            #f_cont {
+                width: 1260px;
+                height: 250px;
+                margin: auto;
+                display: flex;
+            }
+
+            #f_cont input {
+                border: 0;
+                outline-style: none;
+            }
+
+            #f_cont input::placeholder {
+                font-size: 15px;
+                color: grey;
+                font-weight: 300;
+                letter-spacing: .2px;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            #f_cont>div:nth-child(1) {
+                width: 300px;
+                background-color: white
+            }
+
+            #f_cont>div:nth-child(1)>p:nth-child(1) {
+                line-height: 24px;
+                letter-spacing: .2px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            #f_cont>div:nth-child(1)>p:nth-child(3) {
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 20px;
+                letter-spacing: .2px;
+                width: 270px;
+                margin-top: 20px
+            }
+
+            #icons {
+                display: flex;
+                width: 250px;
+                height: 25px;
+                justify-content: space-between;
+                margin-top: 19px;
+            }
+
+            #f_cont>div:nth-child(1)>p:nth-child(5) {
+                font-size: 10px;
+                line-height: 13px;
+                letter-spacing: 0;
+                margin-top: 20px;
+            }
+
+            #f_cont>div:nth-child(1)>div:nth-child(2) {
+                width: 260px;
+                height: 30px;
+                border-bottom: 1px solid black;
+                margin-top: 18px;
+            }
+
+            #f_cont>div:nth-child(2) {
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                margin-left: 100px;
+            }
+
+            #f_cont>div:nth-child(2) div {
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
+                padding-top: 10px;
+                width: 250px
+            }
+
+            .fh {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .navbar-div {
+                height: 30px;
+                margin: auto;
+                position: sticky;
+                top: 0px;
+                background-color: white;
+                z-index: 10;
+                width: 850px;
+                margin-top: 30px;
+            }
+
+            .navbar {
+                width: 850px;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: rgb(94, 118, 155);
+                text-align: center;
+                text-decoration: none;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: visible;
+                margin-right: 40px;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 14px;
+                border: none;
+                outline: none;
+                color: rgb(94, 118, 155);
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .dropbtn:hover {
+                border-bottom: 2px solid rgb(94, 118, 155);
+                font-weight: bolder;
+            }
+
+            .navbar a:hover,
+            .dropdown:hover .dropbtn {
+                text-decoration: grey;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 100;
+                height: 400px;
+                width: 1000px;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: rgb(94, 118, 155);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                font-size: 14px;
+            }
+
+            .dropdown-content a:hover {
+                background-color: white;
+                color: rgb(27, 48, 83);
+                font-weight: bolder;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .navbar-image {
+                width: 453px;
+                height: 50px;
+                margin: auto;
+                padding-top: 0px;
+            }
+
+            .navbar-image img {
+                width: 208px;
+                height: 50px;
+                margin-left: 25%;
+            }
+
+            /* ----modal----- */
+            .modal1 {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 100;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/ opacity */
+            }
+
+            /* Modal Content */
+            .modal-content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0;
+                border: 1px solid #888;
+                width: 70%;
+                height: 60%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                animation-name: animatetop;
+                animation-duration: 0.5s;
+            }
+
+            .close1 {
+
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close1:hover,
+            .close1:focus {
+                cursor: pointer;
+            }
+
+            .modal-header {
+                padding: 20px 16px;
+            }
+
+            .modal-body {
+                padding: 2px 16px;
+            }
+
+            .modal-footer {
+                padding: 2px 16px;
+            }
+
+            /* -------head------- */
+            .header-list {
+                height: 30px;
+                width: 700px;
+                float: right;
+                margin-right: 130px;
+            }
+
+            .header-list-menu {
+                width: 450px;
+                height: 100%;
+                float: right;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .header-list-menu i {
+                padding-left: 20px;
+                color: rgb(94, 118, 155);
+                word-spacing: 5px;
+            }
+
+            .slidediv {
+                width: 98.5vw;
+                height: 36px;
+                background-color: rgb(215, 235, 242);
+            }
+
+            #slideh {
+                font-size: 10px;
+                text-align: center;
+                font-weight: lighter;
+                padding-top: 10px;
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                animation: slide-right 2s infinite;
+                animation-delay: 2s;
+            }
+
+            @keyframes slide-right {
+                from {
+                    margin-right: -100%;
+                }
+
+                to {
+                    margin-right: 1600px;
+                }
+            }
+
+            .close:hover {
+                cursor: pointer;
+            }
+
+            .close {
+                color: black;
+            }
+
+            .stickbottom {
+                width: 99vw;
+                height: 70px;
+                position: sticky;
+                bottom: 0px;
+                z-index: 10;
+                background-color: white;
+            }
+
+            #increase1,
+            #decrease1 {
+                width: 40px;
+                height: 45px;
+            }
+
+            #quantity1 {
+                width: 40px;
+                height: 38px;
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+
+            #addToBag1 {
+                width: 270px;
+                height: 45px;
+                margin-left: 10px;
+                background-color: #12284c;
+                color: white;
+                font-weight: bold;
+                border-style: solid;
+                border-color: #12284c;
+            }
+
+            #close1 {
+                color: white;
+                float: right;
+                font-size: 100px;
+                font-weight: bold;
+
+
+            }
+
+            .remove {
+                width: 150px;
+                height: 40px;
+                color: #122841;
+                font-weight: bold;
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+
+<body>
+
+
+    <!-- ----------header----------- -->
+    <div class="header-list">
+        <div class="header-list-menu" style="font-size: 14px; letter-spacing: 1px">
+            <i class="far fa-heart" id="myBtn" style="word-spacing: 10px"><span>WHISLIST</span></i>
+            <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+            <i class="far fa-user-circle" onclick="signup()" id="signup"><span>SIGN/UP</span></i>
+            <i class="fas fa-shopping-bag"><span onclick="bag()">BAG</span></i>
+        </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal1">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close1">&times;</span>
+                <h2>Whislist</h2>
+                <hr />
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <!-- <div class="modal-footer">
+          <hr />
+          <h3>Modal Footer</h3>
+        </div> -->
+        </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+        <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421" />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">SHOP</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">NEW!</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">BRANDS</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">WELLNESS</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="explore()">EXPLORE</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="events()">EVENTS</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="bluewards()">BLUEWARDS</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="slidediv">
+        <h2 id="slideh"></h2>
+    </div>
+
+
+    <!-- ----------------content--------------- -->
+    <div id="topDiv">
+        <p onclick="frontpage()" style="cursor: pointer;margin-left: 12%;">Home ›</p>
+        <p style="cursor: pointer;">5 Minute Rescue Mask - Soothe</p>
+    </div>
+    <div id="mainContainer">
+        <div id="smallImages">
+            <div id="firstImage">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_100x.jpg?v=1622784962" />
+
+
+            </div>
+            <div id="secondImage">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-2_100x.jpg?v=1622784963" />
+            </div>
+            <div id="thirdImage">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-3_100x.jpg?v=1622784964" />
+            </div>
+        </div>
+        <div id="container">
+        <div>
+            <img id="mainImage"
+                src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_525x525.jpg?v=1622784962" />
+        </div>
+            <div id="productName">
+                <p id="mainName">LUNE+ASTER</p>
+                <p>5 Minute Rescue Mask - Soothe</p>
+                <p id="mainPrice">$8 <u style="color: #5e769b;">&#9733&#9733&#9733&#9733&#9733</u></p>
+                <p>Ultra-soothing sheet mask helps to calm and relieve stressed skin in 5-10 minutes.</p>
+                <div id="line"></div>
+                <button onclick="decrease()" id="decrease">-</button>
+                <input id="quantity" />
+                <button onclick="increase()" id="increase">+</button>
+                <button onclick="addToBag()" id="addToBag">ADD TO BAG |$8</button>
+
+                <div>
+                    <p>4 interest-free payments of $32.50. Klarna.</p>
+                </div>
+            </div>
+            <div id="wishList">
+                <div>
+                    <div>
+                        <img id="heart"
+                            src="https://t3.ftcdn.net/jpg/01/07/96/10/240_F_107961052_qgLEQ9JyqkSw2ghHGmLhUFW6hOrFVqhC.jpg" />
+                    </div>
+                    <div>
+                        <p onclick="addtowhislist()" style="cursor: pointer;">ADD TO WISH LIST</p>
+                    </div>
+                </div>
+                <p>Free Shipping & Returns <u id="showDetail" style="cursor: pointer;">Show Details</u></p>
+            </div>
+        </div>
+    </div>
+    <div id="showDetailDiv"></div>
+    <div id="modal" class="modal" style="z-index: 1000;position: fixed;">
+        <div style="overflow: scroll;" class="modalContent">
+            <p>YOUR BAG</p>
+            <span class="close">&times;</span>
+            <hr>
+            <p>ESTIMATED TO SHIP TOMORROW</p>
+            <div id="modalProduct"></div>
+            <hr>
+            <p>Shipping, Taxes, Beauty Cards, and additional discounts applied at checkout</p>
+            <button id="bottomBag" onclick="viewbag1()">View Bag</button>
+        </div>
+    </div>
+    <div id="productInfo">
+        <div class="hr"></div>
+        <div id="productDetail">
+            <p>Prooduct Details</p>
+        <p>This ultra-soothing sheet mask calms and relieves stressed skin in 5-10 minutes for a renewed, healthy-looking
+            complexion. Perfect for long-haul flights, an at-home spa night or anytime your skin needs a pick-me-up!
+        
+            <u>See More</u>
+        </p>
+        </div>
+
+        <div class="hr"></div>
+        <div id="ingredient">
+            <p>Ingredients</p>
+            <ul style="font-size: 12px;color: grey;">
+                <li>Chamomile helps calm and soothe irritation. Aloe helps soothe and hydrate.</li>
+                <li>Vitamin E and apple seed extract help hydrate, repair and protect skin.
+                    Water, Glycereth-26, Trehalose, Hamamelis Virginiana (Witch Hazel) Leaf Extract, Citrus Paradisi
+                    (Grapefruit) Fruit
+                    Extract, Camellia Sinensis Leaf Extract, Vitis Vinifera (Grape) Fruit Extract, Fragaria Chiloensis
+                    (Strawberry) Fruit
+                    Extract, Salix Alba (Willow) Bark Extract, Rosmarinus Officinalis (Rosemary) Flower Extract, Sodium
+                    Hyaluronate,
+                    1,2-Hexanediol, Ethylhexylglycerin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Carbomer, Disodium
+                    Edta, Butylene
+                    Glycol, Dimethicone, Tromethamine, Alcohol Denat., Peg-60 Hydrogenated Castor Oil, Phenoxyethanol,
+                    Fragrance</li>
+                <u>Show Full Ingredients List</u>
+            </ul>
+        </div>
+        <div class="hr"></div>
+        <div id="howToUse">
+            <p>How to Use</p>
+            <p>Apply a thick layer over face and neck. To activate this formula, massage into the skin until it turns
+                white. Leave on
+                for 20 minutes, then rinse with warm water. Warning: Avoid direct contact with eyes.</p>
+        </div>
+        <div class="hr"></div>
+    </div>
+    <div>
+        <div style="z-index: 1000;" id="modal1">
+            <div>
+                <img id="zoomImg" />
+                <span id="close1">&times;</span>
+            </div>
+        </div>
+
+
+        <div style="width: 99%;height: 1px;background-color: #c4c4c4;margin: auto;margin-top: 30px;"></div>
+
+        <!-- -----------footer-------- -->
+
+        <div id="footer">
+            <div id="f_cont" style="letter-spacing: 0.5px;color: rgb(173,163,171);">
+                <div>
+                    <p>Get Expert Beauty Insight & Offers</p>
+                    <div>
+                        <input type="text" placeholder="EMAIL ADDRESS &#8594;">
+                    </div>
+                    <p>To learn more about how we use your information and your rights, see <span
+                            style="text-decoration: underline;">Privacy Note</span></p>
+                    <div id="icons">
+                        <img src="https://img.icons8.com/metro/452/twitter.png" alt="">
+                        <img src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png"
+                            alt="">
+                        <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png" alt="">
+                        <img src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg" alt="">
+                        <img src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png" alt="">
+                    </div>
+                    <p>Copyright 2021 bluemercury.All Right Reserved</p>
+                </div>
+                <div>
+                    <div>
+                        <div class="fh">BLUEMERCURY</div>
+                        <div>Our Company</div>
+                        <div>Store Locator</div>
+                        <div>In-Store & Online Events</div>
+                        <div>Press</div>
+                        <div>Careers</div>
+                        <div>Vendor Submissions</div>
+                        <div>Diversity & Inclusion</div>
+                    </div>
+                    <div>
+                        <div class="fh">MY ACCOUNT</div>
+                        <div>My Account</div>
+                        <div>BlueRewards</div>
+                        <div>Gift Card Balance Checker</div>
+                    </div>
+                    <div>
+                        <div class="fh">CUSTOMER SERVICE</div>
+                        <div>Contact Us</div>
+                        <div>Help & FAQ</div>
+                        <div>Shipping,Return & Exchanges</div>
+                        <div>Gift Cards</div>
+                        <div>Offers & Promotions</div>
+                        <div>Kiarna</div>
+                    </div>
+                    <div>
+                        <div class="fh">Resources</div>
+                        <div>Terms & Conditions</div>
+                        <div>Privacy Policy</div>
+                        <div>Accessibility</div>
+                        <div>COVID-19 Updates</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="stickbottom">
+            <div style="float: right;">
+                <button onclick="decrease()" id="decrease1">-</button>
+                <input id="quantity1" />
+                <button onclick="increase()" id="increase1">+</button>
+                <button onclick="addToBag()" id="addToBag1">ADD TO BAG |$78</button>
+            </div>
+        </div>
+
+</body>
+
+</html>
+<script>
+
+    let arr = [];
+    var Name = document.getElementById("mainName").innerHTML
+    var Price = document.getElementById("mainPrice").innerHTML
+    let product = {
+        count: 0,
+        Name: '5 Minute Rescue Mask - Soothe',
+        Name1: 'LUNE+ASTER',
+        Price: 8,
+        Image: "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_525x525.jpg?v=1622784962"
+    }
+
+
+    function decrease() {
+
+        if (product.count > 0) {
+            product.count -= 1;
+
+
+        }
+        document.getElementById("addToBag").innerHTML = "ADD TO BAG |$" + product.count * product.Price
+
+        document.getElementById("quantity").value = product.count
+        document.getElementById("addToBag1").innerHTML = "ADD TO BAG |$" + product.count * product.Price
+
+        document.getElementById("quantity1").value = product.count
+
+
+    }
+    function increase() {
+
+
+        product.count += 1
+        document.getElementById("addToBag").innerHTML = "ADD TO BAG | $" + product.count * product.Price
+        document.getElementById("quantity").value = product.count
+        document.getElementById("addToBag1").innerHTML = "ADD TO BAG | $" + product.count * product.Price
+        document.getElementById("quantity1").value = product.count
+
+
+    }
+
+
+
+
+
+
+    function firstImage() {
+            document.getElementById("mainImage").src = "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-1_525x525.jpg?v=1622784962"
+            document.getElementById("firstImage").style.borderStyle = "ridge"
+            document.getElementById("firstImage").style.borderColor = "black"
+            document.getElementById("firstImage").style.borderWidth = 1 + "px"
+            document.getElementById("secondImage").style.borderStyle = null
+            document.getElementById("thirdImage").style.borderStyle = null
+        }
+        document.getElementById("firstImage").addEventListener("click", firstImage)
+
+        function secondImage() {
+            document.getElementById("mainImage").src = "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-2_525x525.jpg?v=1622784963"
+            document.getElementById("secondImage").style.borderStyle = "ridge"
+            document.getElementById("secondImage").style.borderColor = "black"
+            document.getElementById("secondImage").style.borderWidth = 1 + "px"
+            document.getElementById("firstImage").style.borderStyle = null
+            document.getElementById("thirdImage").style.borderStyle = null
+        }
+        document.getElementById("secondImage").addEventListener("click", secondImage)
+
+        function thirdImage() {
+            document.getElementById("mainImage").src = "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-814309020887-3_525x525.jpg?v=1622784964"
+            document.getElementById("thirdImage").style.borderStyle = "ridge"
+            document.getElementById("thirdImage").style.borderColor = "black"
+            document.getElementById("thirdImage").style.borderWidth = 1 + "px"
+            document.getElementById("firstImage").style.borderStyle = null
+            document.getElementById("secondImage").style.borderStyle = null
+        }
+        document.getElementById("thirdImage").addEventListener("click", thirdImage)
+
+    var i = 0;
+    function ShowDetail() {
+
+        if (i == 0) {
+            var div = document.getElementById("showDetailDiv")
+            document.getElementById("showDetail").innerHTML = "Hide details"
+
+            var p = document.createElement("p")
+            p.innerHTML = "Shopping"
+            p.style.color = "#12284c"
+
+            var p1 = document.createElement("p")
+            p1.innerHTML = "- FREE 2-day delivery"
+
+
+            var p2 = document.createElement("p")
+            p2.innerHTML = "- FREE Overnight on orders of $200 or more"
+
+
+            var p3 = document.createElement("p")
+            p3.innerHTML = "- $20 for overnight delivery on orders under $200"
+
+            var p4 = document.createElement("p")
+            p4.innerHTML = "- Orders placed by 4 P.M. (Eastern) will be processed the same business day."
+
+            var p5 = document.createElement("p")
+            p5.innerHTML = "- Orders placed on weekends and holidays will be processed the next business day."
+
+            var p6 = document.createElement("p")
+            p6.innerHTML = "Returns"
+            p6.style.color = "#12284c"
+
+            var p7 = document.createElement("p")
+            p7.innerHTML = "- FREE returns on all orders within 30 days of purchase"
+
+            var p8 = document.createElement("p")
+            p8.innerHTML = "- FREE returns and exchanges in store for all online purchases"
+
+            var p9 = document.createElement("p")
+            p9.innerHTML = "- See Returns page for more details: <u>Returns.</u>"
+            div.append(p, p1, p2, p3, p4, p5, p6, p7, p8, p9)
+
+            i = 1;
+        } else {
+            document.getElementById("showDetail").innerHTML = "Show Details"
+            document.getElementById("showDetailDiv").innerHTML = null
+            i = 0;
+        }
+    }
+    document.getElementById("showDetail").addEventListener("click", ShowDetail)
+
+
+    function addToBag() {
+        var sum = 0;
+        var sum1 = 0
+        var count = 0;
+        document.getElementById("modal").style.display = "block"
+
+
+        let arr;
+        arr = JSON.parse(localStorage.getItem('bag'))
+
+        if (arr == null) {
+            arr = []
+            arr.push(product)  //this is for first time visitor
+            localStorage.setItem('bag', JSON.stringify(arr))
+        }
+        else {
+
+            arr = JSON.parse(localStorage.getItem('bag'))
+            for (let i = 0; i < arr.length; i++) {
+                if (product.Name == arr[i].Name) {
+                    break;
+                }
+                count++;
+            }
+            if (count == arr.length) {
+                arr.push(product)
+             localStorage.setItem('bag', JSON.stringify(arr))
+            }
+
+        }
+
+
+
+
+        arr = JSON.parse(localStorage.getItem('bag'))
+        document.getElementById("modalProduct").innerHTML = null
+        for (let i = 0; i < arr.length; i++) {
+
+            var div1 = document.createElement("div")
+            div1.style.width = 400 + "px"
+            div1.setAttribute("class", "div1")
+            var p9=document.createElement("p")
+            p9.innerHTML=arr[i].Name1
+            var p10 = document.createElement("p")
+            p10.innerHTML = arr[i].Name
+            var p11 = document.createElement("p")
+            p11.innerHTML = "$" + arr[i].Price * arr[i].count
+            var img4 = document.createElement("img")
+            img4.src = arr[i].Image
+            img4.style.width = 150 + "px"
+
+            var div2 = document.createElement("div")
+            div2.setAttribute("class", "div2")
+            var btn3 = document.createElement("button")
+            btn3.setAttribute("class", 'btn3')
+            btn3.innerHTML = "-"
+            var remove = document.createElement("button")
+            remove.innerHTML = 'Remove'
+            remove.setAttribute("class", 'remove')
+            // btn3.onclick = function reduce(){
+            //     // let bag = JSON.parse(localStorage.getItem('bag'))
+            //     console.log(bag.count)
+            // }
+
+            var input = document.createElement("input")
+            input.setAttribute("class", 'Input')
+            input.value = arr[i].count
+
+
+
+
+            var btn4 = document.createElement("button")
+            btn4.setAttribute("class", 'btn4')
+            btn4.innerHTML = "+"
+
+            div2.append(btn3, input, btn4)
+
+            div1.append(p9,p10, p11, div2, img4, remove)
+            document.getElementById("modalProduct").append(div1)
+
+            var temp = 0;
+            remove.onclick = function (e) {
+                temp = arr[i];
+                arr[i] = arr[arr.length - 1]
+                arr[arr.length - 1] = temp;
+                arr.pop()
+                localStorage.setItem('bag', JSON.stringify(arr))
+                e.currentTarget.parentNode.remove()
+
+            }
+
+
+
+            arr = JSON.parse(localStorage.getItem('bag'))
+
+            btn3.onclick = function () {
+                let arr = JSON.parse(localStorage.getItem('bag'))
+
+
+                if (arr[i].count > 0) {
+                    arr[i].count -= 1;
+                    input.value = arr[i].count
+                    localStorage.setItem('bag', JSON.stringify(arr))
+                    document.getElementById("bottomBag").innerHTML = "VIEW BAG |$" + arr[i].count * arr[i].Price
+                    p11.innerHTML = "$" + arr[i].count * arr[i].Price
+                }
+            }
+
+            btn4.onclick = function () {
+                let arr = JSON.parse(localStorage.getItem('bag'))
+
+                if (arr[i].count >= 0) {
+                    arr[i].count += 1;
+
+                    input.value = arr[i].count
+                    localStorage.setItem('bag', JSON.stringify(arr))
+                    document.getElementById("bottomBag").innerHTML = "VIEW BAG |$" + arr[i].count * arr[i].Price
+                    p11.innerHTML = "$" + arr[i].count * arr[i].Price
+                }
+            }
+
+            sum += arr[i].count * arr[i].Price//avinash 
+
+
+
+        }
+
+        document.getElementById("bottomBag").innerHTML = "VIEW BAG |$" + sum
+
+    }
+
+
+
+
+
+    window.onclick = function (event) {
+        if (event.target == document.getElementById("modal")) {
+            document.getElementById("modal").style.display = 'none';
+        } else if (event.target == document.getElementById("modal1")) {
+            document.getElementById("modal1").style.display = "none";
+        }
+    }
+
+    document.querySelector(".close").onclick = function () {
+        document.getElementById("modal").style.display = 'none';
+    }
+    document.getElementById("close1").onclick = function () {
+        document.getElementById("modal1").style.display = 'none';
+    }
+
+    function ZoomImg() {
+        document.getElementById("zoomImg").src = document.getElementById("mainImage").src
+        document.getElementById("modal1").style.display = "block"
+
+
+    }
+
+    document.getElementById("mainImage").addEventListener("click", ZoomImg)
+
+    function frontpage() {
+        window.location.href = "./frontpage.html"
+    }
+
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close1")[0];
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    function signup() {
+        window.location.href = "./loginPage.html";
+    }
+
+
+    var head = document.getElementById("slideh");
+    function slidehead() {
+        const arr = [
+            "FREE SAMPLE WITH ALL ORDERS",
+            "SHOP NOW PAY LATER WITH KLARNA",
+            "FREE SHIPPING FOR BLUEWARDS MEMBERS",
+            "FREE GIFTS WITH PURCHASE BROWSE NOW",
+        ];
+        let i = 0;
+        setInterval(function () {
+            if (i == arr.length) {
+                i = 0;
+            }
+            head.innerHTML = arr[i];
+            i++;
+        }, 2000);
+    }
+    slidehead();
+
+    function bag() {
+        document.getElementById("modal").style.display = "block"
+    }
+
+    function addtowhislist() {
+        let arr = JSON.parse(localStorage.getItem('wishlist'))
+        if (arr == null) {
+            arr = [];
+        } else {
+            arr = JSON.parse(localStorage.getItem('wishlist'))
+        }
+        arr.push(product)
+         localStorage.setItem('wishlist', JSON.stringify(arr))
+    }
+
+      function viewbag1(){
+        window.location.href = "./view-bag.html"
+    }
+
+</script>

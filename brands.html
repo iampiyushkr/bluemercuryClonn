@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>All brands | bluemercury</title>
+</head>
+<script
+      src="https://kit.fontawesome.com/8640696f0c.js"
+      crossorigin="anonymous"
+    ></script>
+<style>
+     .navbar-div {
+      height: 30px;
+      margin: auto;
+      position: sticky;
+      top: 0px;
+      background-color: white;
+      z-index: 10;
+      width: 850px;
+      margin-top: 30px;
+    }
+    .navbar {
+      width: 850px;
+    }
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: rgb(94, 118, 155);
+      text-align: center;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: visible;
+      margin-right: 40px;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 14px;
+      border: none;
+      outline: none;
+      color: rgb(94, 118, 155);
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropbtn:hover {
+      border-bottom: 2px solid rgb(94, 118, 155);
+      font-weight: bolder;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      text-decoration: grey;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      height: 400px;
+      width: 1000px;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: rgb(94, 118, 155);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: white;
+      color: rgb(27, 48, 83);
+      font-weight: bolder;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar-image {
+      width: 453px;
+      height: 50px;
+      margin: auto;
+      padding-top: 0px;
+    }
+    .navbar-image img {
+      width: 208px;
+      height: 50px;
+      margin-left: 25%;
+    }
+
+    /* ----modal----- */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 100; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 70%;
+      height: 60%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      animation-name: animatetop;
+      animation-duration: 0.5s;
+    }
+
+    .close {
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      cursor: pointer;
+    }
+
+    .modal-header {
+      padding: 20px 16px;
+    }
+
+    .modal-body {
+      padding: 2px 16px;
+    }
+
+    .modal-footer {
+      padding: 2px 16px;
+    }
+
+    /* -------head------- */
+    .header-list {
+      height: 30px;
+      width: 700px;
+      float: right;
+      margin-right: 130px;
+    }
+
+    .header-list-menu {
+      width: 450px;
+      height: 100%;
+      float: right;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .header-list-menu i {
+      padding-left: 20px;
+      color: rgb(94, 118, 155);
+      word-spacing: 5px;
+    }
+
+    .slidediv {
+      width: 98.5vw;
+      height: 36px;
+      background-color: rgb(215, 235, 242);
+    }
+    #slideh {
+      font-size: 10px;
+      text-align: center;
+      font-weight: lighter;
+      padding-top: 10px;
+      word-spacing: 1px;
+      letter-spacing: 1px;
+      animation: slide-right 8s infinite;
+      animation-delay: 2s;
+    }
+
+    @keyframes slide-right {
+      from {
+        margin-right: -100%;
+      }
+      to {
+        margin-right: 1600px;
+      }
+    }
+
+    .modal-body {
+      margin: 3%;
+      display: grid;
+      gap: 6%;
+      grid-template-columns: 20% 20% 20% 20%;
+      row-gap: 9%;
+      margin-left: 6%;
+    }
+
+    .innerdiv {
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    #footer{
+        width:1300px;
+        height:300px;
+        padding:35px 44px 50px;
+        font-family: 'Montserrat', sans-serif;
+        color:#12284c;
+    }
+    #f_cont{
+        width:1260px;
+        height:250px;
+        margin:auto;
+        display: flex;
+    }
+    #f_cont input{
+        border:0;
+        outline-style: none;
+    }
+    #f_cont input::placeholder{
+        font-size: 15px;
+        color:#12284c;
+        font-weight: 300;
+        letter-spacing: .2px;
+        font-family: 'Montserrat',sans-serif;
+    }
+    #f_cont>div:nth-child(1){
+        width:300px;
+        background-color:white
+    }
+    #f_cont>div:nth-child(1)>p:nth-child(1){
+        line-height: 24px;
+        letter-spacing: .2px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    #f_cont>div:nth-child(1)>p:nth-child(3){
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: .2px;
+        width:270px;
+        margin-top: 20px
+    }
+    #icons{
+        display: flex;
+        width: 250px;
+        height:25px;
+        justify-content: space-between;
+        margin-top: 19px;
+    }
+    #f_cont>div:nth-child(1)>p:nth-child(5){
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0;
+        margin-top: 20px;
+    }
+    #f_cont>div:nth-child(1)>div:nth-child(2){
+        width:260px;
+        height:30px;
+        border-bottom: 1px solid black;
+        margin-top: 18px;
+    }
+    #f_cont>div:nth-child(2){
+        display: flex;
+        justify-content:space-between;
+        font-size: 12px;
+        margin-left: 100px;
+    }
+    #f_cont>div:nth-child(2) div{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding-top: 10px;
+        width:250px
+    }
+    .fh{
+        font-size:14px;
+        margin-bottom: 15px;
+    }
+    #first_c{
+        height: 100px;
+        padding-top: 55px;
+        padding-bottom: 60px;
+        background-color: #f4fafc;
+        font-size: 30px;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: #12284c;
+        padding-left: 150px;
+}
+#second_c{
+    width: 1100px;
+    height: 80px;
+    padding-top: 60px;
+    /* background-color: red; */
+    margin-left: 150px;
+}
+
+#alphabet{
+    display: flex;
+    width:700;
+    height:20px;
+    margin-left: 150px;
+    /* background-color: aqua; */
+    margin-right: 150px;
+    justify-content: space-evenly;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: #12284c;
+    font-weight: 400;
+    cursor: pointer;
+}
+#third_c{
+    width: 1100px;
+    margin-left: 150px;
+}
+.letter_box{
+    font-weight: 400;
+    font-style: normal;
+    color: #12284c;
+    font-family: 'Montserrat',sans-serif;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 28px;
+}
+.item_box{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.item_box>div{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.item_box>div div{
+    margin-bottom: 10px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #12284c;
+    line-height: 1.65;
+    font-size: 14px;
+}
+</style>
+<body>
+
+ <!-- ----------header----------- -->
+    <div class="header-list">
+      <div
+        class="header-list-menu"
+        style="font-size: 14px; letter-spacing: 1px"
+      >
+        <i class="far fa-heart" id="myBtn" style="word-spacing: 10px"
+          ><span>WHISLIST</span></i
+        >
+        <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+        <i class="far fa-user-circle" onclick="signup()" id="signup"
+          ><span>SIGN/UP</span></i
+        >
+        <i class="fas fa-shopping-bag"><span>BAG</span></i>
+      </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Whislist</h2>
+          <hr />
+        </div>
+        <div class="modal-body"></div>
+        <!-- <div class="modal-footer">
+          <hr />
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421"
+      />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">SHOP</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="new1()">NEW!</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="brands()">BRANDS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">WELLNESS</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="explore()">EXPLORE</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="events()">EVENTS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="bluewards()">BLUEWARDS</button>
+        </div>
+      </div>
+    </div>
+    <div class="slidediv">
+      <h2 id="slideh"></h2>
+    </div>
+
+
+    <div id="first_c">ALL BRANDS</div>
+    <div id="second_c">
+       <div id="alphabet">
+            <div onclick="scrolla()">A</div>
+            <div onclick="scrollb()">B</div>
+            <div onclick="scrollc()">C</div>
+            <div onclick="scrolld()">D</div>
+            <div onclick="scrolle()">E</div>
+            <div onclick="scrollf()">F</div>
+            <div onclick="scrollg()">G</div>
+            <div onclick="scrollh()">H</div>
+            <div onclick="scrolli()">I</div>
+            <div onclick="scrollj()">J</div>
+            <div onclick="scrollk()">K</div>
+            <div onclick="scrolll()">L</div>
+            <div onclick="scrollm()">M</div>
+            <div onclick="scrolln()">N</div>
+            <div onclick="scrollo()">O</div>
+            <div onclick="scrollp()">P</div>
+            <div onclick="scrollq()">Q</div>
+            <div onclick="scrollr()">R</div>
+            <div onclick="scrolls()">S</div>
+            <div onclick="scrollt()">T</div>
+            <div onclick="scrollu()">U</div>
+            <div onclick="scrollv()">V</div>
+            <div onclick="scrollw()">W</div>
+            <div onclick="scrollx()">X</div>
+            <div onclick="scrolly()">Y</div>
+            <div onclick="scrollz()">Z</div>
+            <div onclick="scrollht()">#</div>
+       </div>
+    </div>
+    <div id="third_c">
+        <div class="letter_box">A</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>ABEL</div>
+                <div>AKS</div>
+                <div>Augustinus Bader</div>
+            </div>
+            <div>
+                <div>Aqua Di Parma</div>
+                <div>Alpine Beauty</div>
+                <div>Avene</div>
+            </div>
+            <div>
+                <div>African Botanics</div>
+                <div>AMASS</div>
+            </div>
+            <div>
+                <div>Agent Nateur</div>
+                <div>Anthony</div>
+            </div>
+            <div>
+                <div>AVAHA</div>
+                <div>Aromatherapy Associates</div>
+            </div>
+        </div>
+        <div class="letter_box">B</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Baby Foot</div>
+                <div>Beneath Your Mask</div>
+                <div>Bumble and bumble</div>
+            </div>
+            <div>
+                <div>BareMinerals</div>
+                <div>Biophile</div>
+                <div>BY TERRY</div>
+            </div>
+            <div>
+                <div>beautyblender</div>
+                <div>Bloomeffects</div>
+            </div>
+            <div>
+                <div>BeautyStat Cosmetics</div>
+                <div>Bluemercury</div>
+            </div>
+            <div>
+                <div>Beboe Therapies</div>
+                <div>Bobbi Brown</div>
+            </div>
+        </div>
+        <div class="letter_box">C</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Caudalie</div>
+                <div>Costa Brazil</div>
+            </div>
+            <div>
+                <div>Chantecaille</div>
+            </div>
+            <div>
+                <div>Christophe Robin</div>
+            </div>
+            <div>
+                <div>Clarins</div>
+            </div>
+            <div>
+                <div>Clinique</div>
+            </div>
+        </div>
+        <div class="letter_box">D</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Darphin</div>
+                <div>Dr. Barbara Sturm</div>
+            </div>
+            <div>
+                <div>Deborah Lippmann</div>
+                <div>Dr. Janine Mahon</div>
+            </div>
+            <div>
+                <div>Dermaflash</div>
+                <div>drybar</div>
+            </div>
+            <div>
+                <div>Dermalogica</div>   
+            </div>
+            <div>
+                <div>diptyque</div>
+            </div>
+        </div>
+        <div class="letter_box">E</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Ebi</div>
+            </div>
+            <div>
+                <div>Ellis Brooklyn</div>
+            </div>
+            <div>
+                <div>Estée Lauder</div>
+            </div>
+            <div>
+                <div></div>   
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div class="letter_box">F</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>FOREO</div>
+            </div>
+            <div>
+                <div>Fornasetti Profumi</div>
+            </div>
+            <div>
+                <div>Fresh</div>
+            </div>
+            <div>
+                <div>Fur</div>     
+            </div>
+            <div>
+                <div>Furtuna Skin</div>   
+            </div>   
+        </div>
+        <div class="letter_box">G</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>ghd</div>
+            </div>
+            <div>
+                <div>GLAMGLOW</div>
+            </div>
+            <div>
+                <div>GLISSANT</div>
+            </div>
+            <div>
+                <div>Glo Skin Beauty</div>     
+            </div>
+            <div>
+                <div></div>   
+            </div>   
+        </div>
+        <div class="letter_box">H</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Hampton Sun</div>
+                <div>Hum Nutrition</div>
+            </div>
+            <div>
+                <div>HATCH Mama</div>
+            </div>
+            <div>
+                <div>Heretic</div>
+            </div>
+            <div>
+                <div>Hermetica Paris</div>   
+            </div>
+            <div>
+                <div>Hourglass</div>
+            </div>
+        </div>
+        <div class="letter_box">I</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Indie Lee</div>
+            </div>
+            <div>
+                <div>iS CLINICAL</div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>   
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div class="letter_box">J</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Jack Black</div>
+                <div>Jo Malone London</div>
+            </div>
+            <div>
+                <div>James Read</div>
+                <div>Joanna Vargas</div>
+               
+            </div>
+            <div>
+                <div>Jane Iredale</div>
+                <div>Juice Beauty</div>
+            </div>
+            <div>
+                <div>Jenny Patinkin</div>
+            </div>
+            <div>
+                <div>Jillian Dempsey</div>
+            </div>
+        </div>
+        <div class="letter_box">K</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Kevyn Aucoin</div>
+                <div>Kosas</div>
+            </div>
+            <div>
+                <div>Kiehl's Since 1851</div>               
+            </div>
+            <div>
+                <div>Kjaer Weis</div>
+            </div>
+            <div>
+                <div>KLORANE</div>
+            </div>
+            <div>
+                <div>KNC</div>
+            </div>
+        </div>
+        <div class="letter_box">L</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>La Mer</div>
+                <div>Laura Mercier</div>
+                <div>Living Proof</div>
+            </div>
+            <div>
+                <div>La Roche-Posay</div>
+                <div>LEGOLOGY</div>
+                <div>Lune+Aster</div>
+            </div>
+            <div>
+                <div>LAFCO</div>
+                <div>LightStim</div>
+            </div>
+            <div>
+                <div>Lash Star</div>
+                <div>lilah b.</div>
+            </div>
+            <div>
+                <div>LASHFOOD</div>
+                <div>Lipstick Queen</div>
+            </div>
+        </div>
+        <div class="letter_box">M</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>M-61</div>
+                <div>Molton Brown</div>
+            </div>
+            <div>
+                <div>Mara</div>
+                <div>Moroccanoil</div>
+            </div>
+            <div>
+                <div>Mario Badescu</div>
+                <div>MZ SKIN</div>
+            </div>
+            <div>
+                <div>Mason Pearson</div>
+            </div>
+            <div>
+                <div>Maya Chia</div>
+            </div>
+        </div>
+        <div class="letter_box">N</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Nailmatic</div>
+                <div>Noble Panacea</div>
+            </div>
+            <div>
+                <div>Nannette De Gaspé</div>
+                <div>NuFace</div>
+            </div>
+            <div>
+                <div>NARS</div>
+            </div>
+            <div>
+                <div>Natura Bissé</div>
+            </div>
+            <div>
+                <div>NEST New York</div>
+            </div>
+        </div>
+        <div class="letter_box">O</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Odacité</div>
+            </div>
+            <div>
+                <div>Olaplex</div>
+            </div>
+            <div>
+                <div>One Love Organics</div>
+            </div>
+            <div>
+                <div>Oribe</div>
+            </div>
+            <div>
+                <div>OSEA</div>
+            </div>
+        </div>
+        <div class="letter_box">P</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Patchology</div>
+                <div>PMD</div>
+            </div>
+            <div>
+                <div>Perricone MD</div>
+            </div>
+            <div>
+                <div>Peter Thomas Roth</div>
+            </div>
+            <div>
+                <div>Philip Kingsley</div>
+            </div>
+            <div>
+                <div>PHYTO</div>
+            </div>
+        </div>
+        <div class="letter_box">R</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>R+Co</div>
+                <div>Retrouvé</div>
+            </div>
+            <div>
+                <div>Rahua</div>
+                <div>RMS Beauty</div>
+            </div>
+            <div>
+                <div>Ranavat Botanics</div>
+                <div>Rodial</div>
+            </div>
+            <div>
+                <div>REN Clean Skincare</div>
+                <div>RÓEN BEAUTY</div>
+            </div>
+            <div>
+                <div>Renessence</div>
+                <div>RéVive</div>
+            </div>
+        </div>
+        <div class="letter_box">S</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Sara Happ</div>
+                <div>SkinCeuticals</div>
+                <div>Soleil Toujours</div>
+                <div>Surratt</div>
+            </div>
+            <div>
+                <div>SEEN</div>
+                <div>skyn ICELAND</div>
+                <div>SPARITUAL</div>
+            </div>
+            <div>
+                <div>SHHHOWERCAP</div>
+                <div>Slip</div>
+                <div>St. Tropez</div>
+            </div>
+            <div>
+                <div>SiO Beauty</div>
+                <div>Smith & Cul</div>
+                <div>Supergoop!</div>
+            </div>
+            <div>
+                <div>SK-II</div>
+                <div>Snow Fox Skincare</div>
+                <div>Supermood</div>
+            </div>
+        </div>
+        <div class="letter_box">T</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>T3</div>
+                <div>Tata Harper</div>
+                <div>The Perfect V</div>
+                <div>Trish McEvoy</div>
+            </div>
+            <div>
+                <div>Tammy Fender</div>
+                <div>Teami</div>
+                <div>This Works</div>
+                <div>Tweezerman</div>
+            </div>
+            <div>
+                <div>Tan-Luxe</div>
+                <div>The Beauty Chef</div>
+                <div>TOCCA</div>
+            </div>
+            <div>
+                <div>TanTowel</div>
+                <div>The Light Salon</div>
+                <div>Tom Ford</div>
+            </div>
+            <div>
+                <div>Tara Smith</div>
+                <div>The Nue Co</div>
+                <div>Tracie Martyn</div>
+            </div>
+        </div>
+        <div class="letter_box">V</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>Vilhelm Parfumerie</div>
+                <div>VOLO Beauty</div>
+            </div>
+            <div>
+                <div>VIRTUE</div>
+            </div>
+            <div>
+                <div>VIRTUE® Flourish</div>
+            </div>
+            <div>
+                <div>Vita Liberata</div>
+            </div>
+            <div>
+                <div>Vitruvi</div>
+            </div>
+        </div>
+        <div class="letter_box">W</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>WelleCo</div>
+            </div>
+            <div>
+                <div>Wildling</div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div class="letter_box">Y</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>YUNI</div>
+            </div>
+            <div>
+                <div>Yves Saint Laurent</div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div class="letter_box">#</div>
+        <hr>
+        <div class="item_box">
+            <div>
+                <div>111SKIN</div>
+            </div>
+            <div>
+                <div>8Greens</div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+    </div>
+    <div id="footer" style="margin-left: 300px;">
+        <div id="f_cont">
+            <div>
+                <p>Get Expert Beauty Insight & Offers</p>
+                <div>
+                    <input type="text" placeholder="EMAIL ADDRESS">
+                </div>
+                <p>To  learn more about  how we use your information and your rights, see  <span style="text-decoration: underline;">Privacy Note</span></p>
+                <div id="icons">
+                    <img src="https://img.icons8.com/metro/452/twitter.png" alt="">
+                    <img src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png" alt="">
+                    <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png" alt="">
+                    <img src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg" alt="">
+                    <img src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png" alt="">
+                </div>
+                <p>Copyright 2021 bluemercury.All Right Reserved</p>
+            </div>
+            <div>
+                <div>
+                    <div class="fh">BLUEMERCURY</div>
+                    <div>Our Company</div>
+                    <div>Store Locator</div>
+                    <div>In-Store & Online Events</div>
+                    <div>Press</div>
+                    <div>Careers</div>
+                    <div>Vendor Submissions</div>
+                    <div>Diversity & Inclusion</div>
+                </div>
+                <div>                   
+                    <div class="fh">MY ACCOUNT</div>
+                    <div>My Account</div>
+                    <div>BlueRewards</div>
+                    <div>Gift Card Balance Checker</div>
+                </div>
+                <div>                    
+                    <div class="fh">CUSTOMER SERVICE</div>
+                    <div>Contact Us</div>
+                    <div>Help & FAQ</div>
+                    <div>Shipping,Return & Exchanges</div>
+                    <div>Gift Cards</div>
+                    <div>Offers & Promotions</div>
+                    <div>Kiarna</div>
+                </div>
+                <div>
+                    <div class="fh">Resources</div>
+                    <div>Terms & Conditions</div>
+                    <div>Privacy Policy</div>
+                    <div>Accessibility</div>
+                    <div>COVID-19 Updates</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function scrolla(){
+        window.scrollTo(0,350)
+    }
+    function scrollb(){
+        window.scrollTo(0,500)
+    }
+    function scrollc(){
+        window.scrollTo(0,700)
+    }
+    function scrolld(){
+        window.scrollTo(0,850)
+    }
+    function scrolle(){
+        window.scrollTo(0,990)
+    }
+    function scrollf(){
+        window.scrollTo(0,1090)
+    }
+    function scrollg(){
+        window.scrollTo(0,1200)
+    }
+    function scrollh(){
+        window.scrollTo(0,1330)
+    }
+    function scrolli(){
+        window.scrollTo(0,1470)
+    }
+    function scrollj(){
+        window.scrollTo(0,1580)
+    }
+    function scrollk(){
+        window.scrollTo(0,1730)
+    }
+    function scrolll(){
+        window.scrollTo(0,1900)
+    }
+    function scrollm(){
+        window.scrollTo(0,2080)
+    }
+    function scrolln(){
+        window.scrollTo(0,2200)
+    }
+    function scrollo(){
+        window.scrollTo(0,2360)
+    }
+    function scrollp(){
+        window.scrollTo(0,2470)
+    }
+    function scrollr(){
+        window.scrollTo(0,2590)
+    }
+    function scrolls(){
+        window.scrollTo(0,2760)
+    }
+    function scrollt(){
+        window.scrollTo(0,2960)
+    }
+    function scrollv(){
+        window.scrollTo(0,3200)
+    }
+    function scrollw(){
+        window.scrollTo(0,3340)
+    }
+    function scrolly(){
+        window.scrollTo(0,3480)
+    }
+    function scrollht(){
+        window.scrollTo(0,3690)
+    }
+
+     var modal = document.getElementById("myModal");
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  function signup() {
+    window.location.href = "./loginPage.html";
+  }
+
+  var head = document.getElementById("slideh");
+  function slidehead() {
+    const arr = [
+      "FREE SAMPLE WITH ALL ORDERS",
+      "SHOP NOW PAY LATER WITH KLARNA",
+      "FREE SHIPPING FOR BLUEWARDS MEMBERS",
+      "FREE GIFTS WITH PURCHASE BROWSE NOW",
+    ];
+    let i = 0;
+    setInterval(function () {
+      if (i == arr.length) {
+        i = 0;
+      }
+      head.innerHTML = arr[i];
+      i++;
+    }, 8000);
+  }
+  slidehead();
+
+  function bluewards() {
+    window.location.href = "./explore.html";
+  }
+  function events() {
+    window.location.href = "./explore.html";
+  }
+  function explore() {
+    window.location.href = "./explore.html";
+  }
+
+  let data = JSON.parse(localStorage.getItem("whislist"));
+
+  data.forEach(function (el) {
+    let parent = document.querySelector(".modal-body");
+
+    var div = document.createElement("div");
+    div.setAttribute("onclick", `product$()`);
+    div.style.cursor = "pointer";
+    div.setAttribute("class", "innerdiv");
+
+    var img2 = document.createElement("img");
+    img2.style.width = "95%";
+    img2.style.height = "50%";
+    img2.src = el.Image;
+    var p = document.createElement("p");
+    p.innerHTML = `${el.Name1}`;
+    var p1 = document.createElement("p");
+    p1.innerHTML = `${el.Name2}`;
+    var p2 = document.createElement("p");
+    p2.innerHTML = "$" + `${el.Price}`;
+    var button = document.createElement("button");
+    button.innerText = "ADD TO BAG";
+    button.style.backgroundColor = "rgb(94, 118, 155)";
+    button.style.width = "100%";
+    button.style.height = "50px";
+    button.style.textAlign = "center";
+    button.style.color = "white";
+
+    div.append(img2, p, p1, p2, button);
+    parent.append(div);
+  });
+</script>

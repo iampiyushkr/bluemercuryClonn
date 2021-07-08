@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Montserrat Regular, sans-serif;
+        font-weight: lighter;
+      }
+      #mainDiv {
+        width: 100%;
+
+        margin: auto;
+        display: flex;
+      }
+      #leftDiv {
+        width: 50%;
+
+        margin-left: 100px;
+      }
+      #imgDiv {
+        width: 90%;
+        height: 80px;
+        text-align: center;
+
+        margin: auto;
+        cursor: pointer;
+      }
+      #imgDiv > img {
+        width: 45%;
+        margin-top: 20px;
+      }
+      #headerDiv {
+        width: 90%;
+
+        margin: auto;
+        font-size: 0.8571428571em;
+        color: gray;
+        display: flex;
+      }
+      #headerDiv > p:nth-child(1) {
+        margin-left: 80px;
+      }
+
+      #rightDiv {
+        width: 45%;
+
+        background-color: rgb(248, 248, 248);
+        border-left: 1px solid lightgray;
+      }
+      #rightInnerDiv,
+      #rightInnerDiv2,
+      #rightInnerDiv3 {
+        width: 65%;
+        margin-left: 60px;
+        margin-top: 20px;
+      }
+      #rightInnerDiv4 {
+        width: 65%;
+        display: flex;
+        margin-left: 60px;
+      }
+      #rightInnerDiv img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        border: 1px solid lightgray;
+      }
+      .p1 {
+        font-size: 13px;
+        color: grey;
+        margin-top: -10px;
+      }
+      .p2 {
+        margin-top: -40px;
+        font-weight: bold;
+        margin-left: 120px;
+        float: right;
+      }
+      .span {
+        float: left;
+        margin-top: -69px;
+        background-color: rgb(94, 118, 155);
+        margin-left: -5px;
+        color: white;
+        font-weight: bold;
+        width: 17px;
+        height: 17px;
+        border-radius: 60%;
+        text-align: center;
+        font-size: 13px;
+      }
+      #rightInnerDiv3 p,
+      #rightInnerDiv4 p {
+        color: #122841;
+      }
+      #rightInnerDiv3 {
+        border-bottom: 1px solid lightgray;
+      }
+
+      mark {
+        background-color: white;
+        font-weight: bold;
+      }
+
+      #leftDiv1 {
+        border: 1px solid lightgray;
+        height: 100px;
+        margin: auto;
+        width: 83%;
+      }
+      #leftDiv2 {
+        border: 1px solid lightgray;
+
+        margin: auto;
+        width: 83%;
+      }
+
+      #bottomDiv {
+        display: flex;
+        margin-top: 80px;
+      }
+      #bottomDiv u {
+        font-size: 11px;
+        color: #122841;
+        margin-left: 80px;
+        margin-top: 20px;
+      }
+      #bottomDiv button {
+        width: 320px;
+        height: 50px;
+        background-color: #122841;
+        color: white;
+        font-weight: bold;
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <div id="leftDiv">
+        <div id="imgDiv">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm-checkout-logo.png?61066"
+          />
+        </div>
+        <div id="headerDiv">
+          <p style="cursor: pointer">Cart ></p>
+          <p style="cursor: pointer">
+            Customer information > <mark>Shipping method</mark> > Payment method
+          </p>
+        </div>
+        <p style="margin-left: 70px; color: #122841; font-size: 20px">
+          Contact Information
+        </p>
+        <div id="leftDiv1">
+          <div style="display: flex">
+            <p style="color: #122841; margin-left: 10px">Contact</p>
+            <p style="margin-left: 50px; color: gray" id="emailInfo"></p>
+          </div>
+          <u
+            style="
+              float: right;
+              margin-top: -30px;
+              margin-right: 10px;
+              color: #12284c;
+            "
+            >Change</u
+          >
+
+          <hr style="width: 95%; margin-top: -2px; margin-bottom: -2px" />
+          <div style="display: flex">
+            <p style="color: #122841; margin-left: 10px">Ship to</p>
+            <p style="margin-left: 50px; color: gray" id="addressInfo"></p>
+          </div>
+          <u
+            style="
+              float: right;
+              margin-top: -30px;
+              margin-right: 10px;
+              color: #12284c;
+            "
+            >Change</u
+          >
+        </div>
+        <p style="margin-left: 70px; color: #122841; font-size: 20px">
+          Shipping method
+        </p>
+        <p style="font-size: 10px; color: #12284c; margin-left: 70px">
+          JOIN OUR LOYALTY PROGRAM FOR FREE SHIPPING! <u>LEARN MORE</u>
+        </p>
+        <div id="leftDiv2">
+          <div>
+            <div style="display: flex; margin-left: 10px">
+              <input
+                id="input1"
+                style="margin-top: 15px; cursor: pointer"
+                type="checkbox"
+              />
+              <p style="color: #122841; margin-left: 10px; cursor: pointer">
+                Ground Shipping (3-7 days)
+              </p>
+            </div>
+            <p
+              style="
+                float: right;
+                margin-top: -30px;
+                margin-right: 10px;
+                color: #12284c;
+              "
+            >
+              Free
+            </p>
+            <hr style="width: 95%; margin-top: -2px; margin-bottom: -2px" />
+          </div>
+          <div>
+            <div style="display: flex; margin-left: 10px">
+              <input
+                id="input2"
+                style="cursor: pointer; margin-top: 15px"
+                type="checkbox"
+              />
+              <p style="color: #122841; margin-left: 10px; cursor: pointer">
+                Two-Day Shipping (Excludes PO Box or APO/FPO)
+              </p>
+            </div>
+            <p
+              style="
+                float: right;
+                margin-top: -30px;
+                margin-right: 10px;
+                color: #12284c;
+              "
+            >
+              $10.00
+            </p>
+            <hr style="width: 95%; margin-top: -2px; margin-bottom: -2px" />
+          </div>
+          <div>
+            <div style="display: flex; margin-left: 10px">
+              <input
+                id="input3"
+                style="margin-top: 15px; cursor: pointer"
+                type="checkbox"
+              />
+              <p style="cursor: pointer; color: #122841; margin-left: 10px">
+                Overnight Shipping (Excludes PO Box or APO/FPO)
+              </p>
+            </div>
+            <p
+              style="
+                float: right;
+                margin-top: -30px;
+                margin-right: 10px;
+                color: #12284c;
+              "
+            >
+              $20.00
+            </p>
+          </div>
+        </div>
+
+        <div id="bottomDiv">
+          <u style="cursor: pointer">RETURN TO information</u>
+          <button style="cursor: pointer" id="shipping" onclick="payment1()">
+            CONTINUE TO PAYMENT METHOD
+          </button>
+        </div>
+        <hr style="margin-top: 50px; color: lightgray; width: 91%" />
+        <p
+          style="
+            margin-left: 30px;
+            font-size: 13px;
+            color: gray;
+            margin-top: 10px;
+          "
+        >
+          All rights reserved bluemercury
+        </p>
+      </div>
+      <div id="rightDiv">
+        <div id="rightInnerDiv"></div>
+        <div id="rightInnerDiv2">
+          <div style="display: flex">
+            <input
+              style="
+                width: 60%;
+                height: 45px;
+                border: 2px solid #12284c;
+                cursor: pointer;
+              "
+              placeholder="Gift Card/Promocode"
+              id="promo"
+            />
+            <button
+              style="
+                width: 40%;
+                height: 50px;
+                background-color: #12284c;
+                color: white;
+                cursor: pointer;
+              "
+              id="apply"
+            >
+              APPLY
+            </button>
+          </div>
+        </div>
+        <hr
+          style="
+            color: lightgray;
+            margin-top: 20px;
+            width: 65%;
+            margin-right: 140px;
+          "
+        />
+        <div id="rightInnerDiv3">
+          <div style="display: flex">
+            <p>Subtotal</p>
+            <p style="margin-left: 270px" id="totalPrice"></p>
+          </div>
+          <div style="margin-top: -20px">
+            <p>Shipping</p>
+            <p
+              style="
+                font-size: 12px;
+                margin-top: -30px;
+                float: right;
+                margin-right: 10px;
+              "
+              id="inputValue"
+            >
+              Connect in next siep
+            </p>
+          </div>
+        </div>
+        <div id="rightInnerDiv4">
+          <p style="font-weight: bold; margin-top: 25px; font-size: 20px">
+            Total
+          </p>
+          <p
+            style="margin-left: 270px; font-weight: 200; font-size: 25px"
+            id="totalPrice1"
+          ></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let info = JSON.parse(localStorage.getItem("info"));
+  document.getElementById("emailInfo").innerHTML = info[0].Email;
+  document.getElementById("addressInfo").innerHTML =
+    info[0].City + info[0].Address + info[0].Zip;
+
+  let arr = JSON.parse(localStorage.getItem("bag"));
+  console.log(5);
+  var sum = 0;
+  for (i = 0; i < arr.length; i++) {
+    var div = document.createElement("div");
+    div.style.marginTop = 10 + "px";
+    var div1 = document.createElement("div");
+    div1.style.display = "flex";
+    var div2 = document.createElement("div");
+    var img = document.createElement("img");
+    img.src = arr[i].Image;
+    var p = document.createElement("p");
+    p.innerHTML = arr[i].Name1;
+    p.style.fontSize = 15 + "px";
+    p.style.fontWeight = "bold";
+    p.style.color = "#12284c";
+    var p1 = document.createElement("p");
+    p1.innerHTML = arr[i].Name;
+    p1.setAttribute("class", "p1");
+    var p2 = document.createElement("p");
+    p2.innerHTML = "$" + arr[i].Price;
+    p2.setAttribute("class", "p2");
+
+    var span = document.createElement("span");
+    span.innerHTML = arr[i].count;
+    span.setAttribute("class", "span");
+
+    div2.append(p, p1, span);
+    div1.append(img, div2);
+    div.append(div1, p2);
+    document.getElementById("rightInnerDiv").append(div);
+
+    sum += arr[i].count * arr[i].Price;
+  }
+
+  var sum2 = JSON.parse(localStorage.getItem("promo"));
+  var sum3 = sum * 0.5;
+  document.getElementById("totalPrice").innerHTML = "$" + sum;
+  document.getElementById("totalPrice1").innerHTML = "$" + sum3;
+
+  function promo() {
+    if (document.getElementById("promo").value == "penten50") {
+      document.getElementById("totalPrice1").innerHTML = "$" + sum * 0.5;
+      document.getElementById("totalPrice").innerHTML = "$" + sum * 0.5;
+      alert("Promo Code Applied");
+    }
+  }
+  document.getElementById("apply").addEventListener("click", promo);
+
+  function Groundshipping() {
+    document.getElementById("inputValue").innerHTML = "Free";
+    document.getElementById("input2").checked = false;
+    document.getElementById("input3").checked = false;
+
+    window.localStorage.removeItem("delivery");
+    let arr = ["Ground Shipping(3 - 7 days)"];
+    localStorage.setItem("delivery", arr);
+  }
+  document.getElementById("input1").addEventListener("click", Groundshipping);
+  function TwoDayshipping() {
+    var arr7 = JSON.parse(localStorage.getItem("promo"));
+
+    if (arr7 == null) {
+      document.getElementById("totalPrice1").innerHTML = "$" + (sum + 10);
+    } else {
+      var sum1 = sum * arr7[0].pentane50;
+      document.getElementById("totalPrice1").innerHTML = "$" + (sum1 + 10);
+    }
+
+    document.getElementById("inputValue").innerHTML = "$" + 10;
+
+    document.getElementById("input1").checked = false;
+
+    document.getElementById("input3").checked = false;
+
+    window.localStorage.removeItem("delivery");
+    let arr = ["Two-Day Shipping (Excludes PO Box or APO/FPO)"];
+    localStorage.setItem("delivery", arr);
+  }
+  document.getElementById("input2").addEventListener("click", TwoDayshipping);
+  function Overnightshipping() {
+    var arr7 = JSON.parse(localStorage.getItem("promo"));
+    if (arr7 == null) {
+      document.getElementById("totalPrice1").innerHTML = "$" + (sum + 20);
+    } else {
+      var sum1 = sum * arr7[0].pentane50;
+      document.getElementById("totalPrice1").innerHTML = "$" + (sum1 + 20);
+    }
+
+    document.getElementById("inputValue").innerHTML = "$" + 20;
+
+    document.getElementById("input2").checked = false;
+    document.getElementById("input1").checked = false;
+
+    window.localStorage.removeItem("delivery");
+    let arr = ["Overnight Shipping (Excludes PO Box or APO/FPO)"];
+    localStorage.setItem("delivery", arr);
+  }
+  document
+    .getElementById("input3")
+    .addEventListener("click", Overnightshipping);
+
+  function apply() {
+    if (document.getElementById("promo").value.length != 0) {
+      alert("Promo Code Already Applied");
+    }
+  }
+  document.getElementById("apply").addEventListener("click", apply);
+
+  function shipping() {
+    if (
+      document.getElementById("input1").checked == false &&
+      document.getElementById("input2").checked == false &&
+      document.getElementById("input3").checked == false
+    ) {
+      alert("Choose one shipping option");
+    }
+  }
+  document.getElementById("shipping").addEventListener("click", shipping);
+
+  function payment1() {
+    window.location.href = "./paymentMethod.html";
+  }
+</script>
