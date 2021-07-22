@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/8640696f0c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/signup.css">
+    
+    
+</head>
+<body>
+
+
+ <!-- ----------header----------- -->
+    <div class="header-list">
+      <div
+        class="header-list-menu"
+        style="font-size: 14px; letter-spacing: 1px"
+      >
+        <i class="far fa-heart" id="myBtn" style="word-spacing: 10px"
+          ><span>WHISLIST</span></i
+        >
+        <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+        <i class="far fa-user-circle" onclick="signup()" id="signup"
+          ><span>SIGN/UP</span></i
+        >
+        <i class="fas fa-shopping-bag"><span>BAG</span></i>
+      </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Whislist</h2>
+          <hr />
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
+        <!-- <div class="modal-footer">
+          <hr />
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421"
+      />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            SHOP
+          </button>
+          <div class="dropdown-content">
+           <div style="width: 50%;float: left;">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>  
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%;float: left;line-height: 10px;">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="new1()">
+            NEW!
+          </button>
+         
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="brands()">
+             BRANDS
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            WELLNESS
+          </button>
+          <div class="dropdown-content">
+            <div style="width: 50%;float: left;">
+             <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>  
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%;float: left;line-height: 10px;">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="explore()">
+            EXPLORE
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="events()">
+            EVENTS
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="bluewards()">
+            BLUEWARDS
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slidediv">
+      <h2 id="slideh"></h2>
+    </div>
+    
+    <div class="h1"><h1>CREATE ACCOUNT</h1></div>
+    <div class="para"><p>Complete the form below to create a bluemercury.com account.</p></div>
+
+    <form id="form">
+        <input type="text" id="email" placeholder="E-Mail*"></input>
+        <input type="text" id="firstname" placeholder="First Name*"></input>
+        <input type="text" id="lastname" placeholder="Last Name*"></input>
+        <input type="password" id="password" placeholder="Password*" ></input>
+    </form>
+
+    <div  id="required"><p>*Indicates Required Feild</p></div>
+
+    <div class="loyality-join-content">
+        <div class="loyality-join-left">
+           <input type="checkbox" name="checkbox" id="checkbox">
+        </div>
+        <div class="loyality-join-center">
+            <p>join</p>
+            <p>BLUEWARDS</p>
+        </div>
+        <div style="font-size: 14px;padding: 17px;">
+            Earn $10 for every $250 you spend, plus FREE birthday gifts & treatments!
+        </div>
+    </div>
+    <p class="privacy">To learn more about how we use your information and your rights, see <a href="#">Privacy Note</a></p>
+
+    <div class="login">
+        <button onclick="submit()" id="button">CREATE ACCOUNT</button>
+    </div>
+
+    <p class="createone">Already have a bluemercury.com account? <a href="loginPage.html">Sign In</a></p>
+
+
+    <div
+      style="
+        width: 99%;
+        height: 1px;
+        background-color: #c4c4c4;
+        margin: auto;
+        margin-top: 30px;
+        top: 610px;
+      "
+    ></div>
+
+
+     <div id="footer">
+      <div id="f_cont" style="letter-spacing: 0.5px; color: rgb(173, 163, 171)">
+        <div>
+          <p>Get Expert Beauty Insight & Offers</p>
+          <div>
+            <input type="text" placeholder="EMAIL ADDRESS &#8594;" />
+          </div>
+          <p>
+            To learn more about how we use your information and your rights, see
+            <span style="text-decoration: underline">Privacy Note</span>
+          </p>
+          <div id="icons">
+            <img src="https://img.icons8.com/metro/452/twitter.png" alt="" />
+            <img
+              src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png"
+              alt=""
+            />
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"
+              alt=""
+            />
+            <img
+              src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg"
+              alt=""
+            />
+            <img
+              src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+              alt=""
+            />
+          </div>
+          <p>Copyright 2021 bluemercury.All Right Reserved</p>
+        </div>
+        <div>
+          <div>
+            <div class="fh">BLUEMERCURY</div>
+            <div>Our Company</div>
+            <div>Store Locator</div>
+            <div>In-Store & Online Events</div>
+            <div>Press</div>
+            <div>Careers</div>
+            <div>Vendor Submissions</div>
+            <div>Diversity & Inclusion</div>
+          </div>
+          <div>
+            <div class="fh">MY ACCOUNT</div>
+            <div>My Account</div>
+            <div>BlueRewards</div>
+            <div>Gift Card Balance Checker</div>
+          </div>
+          <div>
+            <div class="fh">CUSTOMER SERVICE</div>
+            <div>Contact Us</div>
+            <div>Help & FAQ</div>
+            <div>Shipping,Return & Exchanges</div>
+            <div>Gift Cards</div>
+            <div>Offers & Promotions</div>
+            <div>Kiarna</div>
+          </div>
+          <div>
+            <div class="fh">Resources</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy Policy</div>
+            <div>Accessibility</div>
+            <div>COVID-19 Updates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>
+<script src="../javascript/signup.js"></script>
+<script>
+ 
+</script>

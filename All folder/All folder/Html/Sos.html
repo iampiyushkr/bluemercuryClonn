@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://kit.fontawesome.com/8640696f0c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="../CSS//sos.css">
+    </head>
+
+<body>
+
+
+    <!-- ----------header----------- -->
+    <div class="header-list">
+        <div class="header-list-menu" style="font-size: 14px; letter-spacing: 1px">
+            <i class="far fa-heart" id="myBtn" style="word-spacing: 10px"><span>WHISLIST</span></i>
+            <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+            <i class="far fa-user-circle" onclick="signup()" id="signup"><span>SIGN/UP</span></i>
+            <i class="fas fa-shopping-bag"><span onclick="bag()">BAG</span></i>
+        </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal1">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close1">&times;</span>
+                <h2>Whislist</h2>
+                <hr />
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <!-- <div class="modal-footer">
+          <hr />
+          <h3>Modal Footer</h3>
+        </div> -->
+        </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+        <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421" />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">SHOP</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">NEW!</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">BRANDS</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">WELLNESS</button>
+                <div class="dropdown-content">
+                    <div style="width: 50%; float: left">
+                        <a href="#">SKINCARE</a>
+                        <a href="#">BATH & BODY</a>
+                        <a href="#">MAKEUP</a>
+                        <a href="#">HAIR</a>
+                        <a href="#">SUN-TAN</a>
+                        <a href="#">SCIENCE & TECHNOLOGY</a>
+                        <a href="#">TOOLS</a>
+                        <a href="#">ACCESSORIES</a>
+                        <a href="#">BEST SELLERS</a>
+                    </div>
+                    <div style="width: 50%; float: left; line-height: 10px">
+                        <a href="#">SHOP ALL</a>
+                        <a href="#">BEAUTY ACCESSORIES</a>
+                        <a href="#">CLEANERS</a>
+                        <a href="#">MASKS</a>
+                        <a href="#">MOUSTERIZERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="explore()">EXPLORE</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="events()">EVENTS</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="bluewards()">BLUEWARDS</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="slidediv">
+        <h2 id="slideh"></h2>
+    </div>
+
+
+    <!-- ----------------content--------------- -->
+    <div id="topDiv">
+        <p onclick="frontpage()" style="cursor: pointer;margin-left: 12%;">Home ›</p>
+        <p style="cursor: pointer;">SOS Mask - Hydra</p>
+    </div>
+    <div id="mainContainer">
+        <div id="smallImages">
+            <div id="firstImage">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3380810177572-1_100x.jpg?v=1622611637" />
+            </div>
+        
+        </div>
+        <div id="container">
+            <div>
+                <img id="mainImage"
+                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3380810177572-1_525x525.jpg?v=1622611637" />
+            </div>
+            <div id="productName">
+                <p id="mainName">CLARINS</p>
+                <p>Gentle Cleanser</p>
+            <p id="mainPrice">$35 <u style="color: #5e769b;">&#9734&#9734&#9734&#9734&#9734</u></p>
+            <p>SOS Hydra Refreshing Hydration Mask Super-quenching 10-minute face mask for dehydrated skin that visibly smoothes
+                fine
+                lines, soothes irritations and revives radiance.</p>
+            <div id="line"></div>
+                <button onclick="decrease()" id="decrease">-</button>
+                <input id="quantity" />
+                <button onclick="increase()" id="increase">+</button>
+                <button onclick="addToBag()" id="addToBag">ADD TO BAG |$35</button>
+
+                <div>
+                    <p>4 interest-free payments of $32.50. Klarna.</p>
+                </div>
+            </div>
+            <div id="wishList">
+                <div>
+                    <div>
+                        <img id="heart"
+                            src="https://t3.ftcdn.net/jpg/01/07/96/10/240_F_107961052_qgLEQ9JyqkSw2ghHGmLhUFW6hOrFVqhC.jpg" />
+                    </div>
+                    <div>
+                        <p onclick="addtowhislist()" style="cursor: pointer;">ADD TO WISH LIST</p>
+                    </div>
+                </div>
+                <p>Free Shipping & Returns <u id="showDetail" style="cursor: pointer;">Show Details</u></p>
+            </div>
+        </div>
+    </div>
+    <div id="showDetailDiv"></div>
+    <div id="modal" class="modal" style="z-index: 1000;position: fixed;">
+        <div style="overflow: scroll;" class="modalContent">
+            <p>YOUR BAG</p>
+            <span class="close">&times;</span>
+            <hr>
+            <p>ESTIMATED TO SHIP TOMORROW</p>
+            <div id="modalProduct"></div>
+            <hr>
+            <p>Shipping, Taxes, Beauty Cards, and additional discounts applied at checkout</p>
+            <button id="bottomBag" onclick="viewbag1()">View Bag</button>
+        </div>
+    </div>
+    <div id="productInfo">
+        <div class="hr"></div>
+        <div id="productDetail">
+            <p>Prooduct Details</p>
+            <p>The 10-minute moisture fix for skin that is dull, tight and thirsty—this hydrating face mask contains super-quenching
+                Organic Leaf of Life extract to visibly smooth fine lines, soothe irritations and revive radiance. Hyaluronic acid
+                locks
+                moisture into the skin for hours of continuous hydration. Refreshing cream-gel formula enhances skin with a
+                healthy-looking glow.
+                <u>See More</u>
+            </p>
+        </div>
+
+        <div class="hr"></div>
+        <div id="ingredient">
+            <p>Ingredients</p>
+        <ul>
+            <li>Leaf of Life-Boosts the skin's natural hydration.</li>
+            <u>Show Full Ingredients List</u>
+        </ul>
+        </div>
+        <div class="hr"></div>
+        <div id="howToUse">
+            <p>How to Use</p>
+            <p>Pinch a small amount of corrector cream between fingertips and rub in circular motions to warm. Apply
+                gently to face,
+                neck and chest twice daily.</p>
+            </div>
+        <div class="hr"></div>
+    </div>
+    <div>
+        <div style="z-index: 1000;" id="modal1">
+            <div>
+                <img id="zoomImg" />
+                <span id="close1">&times;</span>
+            </div>
+        </div>
+
+
+        <div style="width: 99%;height: 1px;background-color: #c4c4c4;margin: auto;margin-top: 30px;"></div>
+
+        <!-- -----------footer-------- -->
+
+        <div id="footer">
+            <div id="f_cont" style="letter-spacing: 0.5px;color: rgb(173,163,171);">
+                <div>
+                    <p>Get Expert Beauty Insight & Offers</p>
+                    <div>
+                        <input type="text" placeholder="EMAIL ADDRESS &#8594;">
+                    </div>
+                    <p>To learn more about how we use your information and your rights, see <span
+                            style="text-decoration: underline;">Privacy Note</span></p>
+                    <div id="icons">
+                        <img src="https://img.icons8.com/metro/452/twitter.png" alt="">
+                        <img src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png"
+                            alt="">
+                        <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png" alt="">
+                        <img src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg" alt="">
+                        <img src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png" alt="">
+                    </div>
+                    <p>Copyright 2021 bluemercury.All Right Reserved</p>
+                </div>
+                <div>
+                    <div>
+                        <div class="fh">BLUEMERCURY</div>
+                        <div>Our Company</div>
+                        <div>Store Locator</div>
+                        <div>In-Store & Online Events</div>
+                        <div>Press</div>
+                        <div>Careers</div>
+                        <div>Vendor Submissions</div>
+                        <div>Diversity & Inclusion</div>
+                    </div>
+                    <div>
+                        <div class="fh">MY ACCOUNT</div>
+                        <div>My Account</div>
+                        <div>BlueRewards</div>
+                        <div>Gift Card Balance Checker</div>
+                    </div>
+                    <div>
+                        <div class="fh">CUSTOMER SERVICE</div>
+                        <div>Contact Us</div>
+                        <div>Help & FAQ</div>
+                        <div>Shipping,Return & Exchanges</div>
+                        <div>Gift Cards</div>
+                        <div>Offers & Promotions</div>
+                        <div>Kiarna</div>
+                    </div>
+                    <div>
+                        <div class="fh">Resources</div>
+                        <div>Terms & Conditions</div>
+                        <div>Privacy Policy</div>
+                        <div>Accessibility</div>
+                        <div>COVID-19 Updates</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="stickbottom">
+            <div style="float: right;">
+                <button onclick="decrease()" id="decrease1">-</button>
+                <input id="quantity1" />
+                <button onclick="increase()" id="increase1">+</button>
+                <button onclick="addToBag()" id="addToBag1">ADD TO BAG |$78</button>
+            </div>
+        </div>
+
+</body>
+
+</html>
+<script src="../javascript/sos.js"></script>
+<script>
+
+    
+</script>

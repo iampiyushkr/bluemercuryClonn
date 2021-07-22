@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Events| bluemercury</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8640696f0c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <link rel="stylesheet" type="text/css" href="../CSS/events.css">
+  <style>
+   
+  </style>
+  <body>
+    <!-- ----------header----------- -->
+    <div class="header-list">
+      <div
+        class="header-list-menu"
+        style="font-size: 14px; letter-spacing: 1px"
+      >
+        <i class="far fa-heart" id="myBtn1" style="word-spacing: 10px"
+          ><span>WHISLIST</span></i
+        >
+        <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+        <i class="far fa-user-circle" onclick="signup()" id="signup"
+          ><span>SIGN/UP</span></i
+        >
+        <i class="fas fa-shopping-bag"><span>BAG</span></i>
+      </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" style="overflow: scroll">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Whislist</h2>
+          <hr />
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421"
+      />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">SHOP</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="#">SKINCARE</a>
+              <a href="#">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="#">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">NEW!</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="#">SKINCARE</a>
+              <a href="#">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="#">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown" style="width: 70px">
+          <button class="dropbtn">BRANDS</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="#">SKINCARE</a>
+              <a href="#">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="#">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">WELLNESS</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="#">SKINCARE</a>
+              <a href="#">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="#">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="explore()">EXPLORE</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="events()">EVENTS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="bluewards()">BLUEWARDS</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slidediv">
+      <h2 id="slideh"></h2>
+    </div>
+
+
+
+
+      <div id="first_c" style="margin-left: 300px">
+        <div><span>BLUEMERCURY EXCLUSIVE EVENTS</span></div>
+      </div>
+      <div id="second_c" style="margin-left: 300px">
+        <div>
+          <div>
+            <button id="first_btn" onclick="scroll_1()">
+              VIRTUAL MASTERCLASSES
+            </button>
+          </div>
+          <div>
+            <button id="second_btn" onclick="scroll_2()">STORE EVENTS</button>
+          </div>
+          <div>
+            <button id="third_btn" onclick="scroll_3()">NEW STORES</button>
+          </div>
+          <div>
+            <button id="fourth_btn" onclick="scroll_4()">SERVICES</button>
+          </div>
+        </div>
+      </div>
+      <div id="third_c" style="margin-left: 400px">
+        <div><p>BLUEMERCURY PRESENTS</p></div>
+        <div><h2>MASTERCLASS</h2></div>
+        <div>
+          <p>
+            Join us every Friday for an exclusive online series of beauty
+            Masterclasses. Listen, learn and engage with experts from our
+            favorite brands as they give intimate insights into their brand,
+            products, and techniques.
+          </p>
+        </div>
+      </div>
+      <div id="fourth_c" style="margin-left: 300px">
+        <div class="inner_container">
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/masterclass-rco-21-05-step_400x400.jpg?v=1621360447"
+            />
+          </div>
+          <div>
+            <i class="arrow left"></i>
+          </div>
+          <div>
+            <p>THURSDAY,JUNE 10TH AT 5PM EST</p>
+            <p>R+Co Masterclass</p>
+            <p>
+              Join celebrity hairstylist and R+Co Collective member Ashley
+              Streicher to learn how to create the ultimate summer hair: undone,
+              beach-y styles for every type and texture!
+            </p>
+            <a href="#">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div id="fifth_c" style="margin-left: 300px">
+        <div class="second_inner_container">
+          <div>
+            <p>THURSDAY,JUNE 24TH AT 12PM EST</p>
+            <p>ReVive Masterclass</p>
+            <p>
+              Join RéVive founder Dr. Gregory Bays Brown and RéVive global
+              trainer and elite esthetician Klaudia Wachowski to learn how to
+              perform at-home facials for glowing skin.
+            </p>
+            <a href="#">BOOK NOW</a>
+          </div>
+          <div>
+            <i class="arrow right"></i>
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/masterclass-revive-21-06-step_400x400.jpg?v=1621361016"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div id="sixth_c" style="margin-left: 300px">
+        <div class="inner_container">
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/masterclass-nars-21-06-step_400x400.jpg?v=1621362113"
+            />
+          </div>
+          <div>
+            <i class="arrow left"></i>
+          </div>
+          <div>
+            <p>WEDNESDAY,JUNE 30TH AT 2PM EST</p>
+            <p>NARS Masterclass</p>
+            <p>
+              Join NARS global makeup artist Jenny Smith and NARS national
+              makeup artist Niko Lopez to learn the secrets to achieving a
+              summer glow, featuring the “Orgasm on the Beach” collection.
+            </p>
+            <a href="#">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div id="seventh_c" style="margin-left: 300px">
+        <div class="second_inner_container">
+          <div>
+            <p>THURSDAY,15TH JULY</p>
+            <p>Dermalogica Masterclass</p>
+            <p>
+              Join Dermalogica’s VP of Research, Development and Education, Dr.
+              Angela Murphy, to learn how to treat microscopic changes in skin
+              that can lead to redness, dehydration and signs of aging
+            </p>
+          </div>
+          <div>
+            <i class="arrow right"></i>
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/masterclass-dermalogica-21-06-step_400x400.jpg?v=1621361624"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div id="eight_container" style="margin-left: 300px">
+        <div><h2>PAST EVENTS</h2></div>
+        <div>
+          No need for FOMO—see below to watch recaps of our most popular virtual
+          events.
+        </div>
+      </div>
+    </div>
+    <div id="ninth_container">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/in-conversation-midfulness-hero-des.jpg?v=1617992026"
+      />
+      <div>
+        <div><span>in</span><span> CONVERSATION</span></div>
+        <div>MINDFULNESS</div>
+        <div>
+          Conscious Beauty innovators, Tata Harper and Bee Shapiro, discuss
+          mindful ingredients and more with Bluemercury founder and CEO, Marla
+          Beck
+        </div>
+        <div>WATCH A RECAP</div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="tenth_container" style="margin-top: 150px;margin-left: 300px;">
+      <div class="second_inner_container">
+        <div>
+          <p>BLUEMERCURY PRESENTS</p>
+          <p>Intimate + Feminine Care Masterclass</p>
+          <p>
+            In celebration of Mother's Day: Ariane Goldman of Hatch Mama, Bre
+            Robbins of Ebi, Dr. Karyn Eilber of Glissant and Dr. Janine Mahon
+            will gather to share stories and highlight the products they’ve
+            created to support moms and moms-to-be at every step in their
+            journey
+          </p>
+          <a href="#">WATCH A RECAP</a>
+        </div>
+        <div>
+          <i class="arrow right"></i>
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Ebi-HatchMama-DrJeanineMahon-Glissant-Headshots_1_400x400.jpg?v=1619959449"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="eleventh_container" style="margin-left: 550px">NEW IN OUR NEIGHBORHOOD</div>
+    <div id="twelth_container" style="margin-left: 300px">
+      <div id>
+        <div>IN-STORE SPECIAL!</div>
+        <div>SIGNATURE SCENTS</div>
+        <div>
+          Schedule a personalized consultation with a Fragrance Expert and get
+          free samples of any perfume to try out on your own!
+        </div>
+        <div>FIND YOUR STORE</div>
+      </div>
+      <div id>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/fragrance-consultation-hero-mob-content.jpg?v=1611351577"
+        />
+      </div>
+    </div>
+    <div id="thirteen_container" style="margin-left: 500px">
+      <div>
+        <p>NOW OPEN! IN POTOMAC, MARYLAND</p>
+        <p>Bluemercury Cabin John</p>
+        <p>
+          Join us in welcoming our newest neighborhood store to the family.
+          Visit us to find innovative beauty products and honest, expert advice.
+        </p>
+        <p>VIEW STORE DETAILS</p>
+      </div>
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/store-opening-cabin-john-step_400x400.jpg?v=1621006423"
+        />
+      </div>
+    </div>
+    <div id="fourteen_container">
+      <p>JOIN US ANYTIME!</p>
+      <p>ALWAYS AVAILABLE!</p>
+    </div>
+    <br />
+    <br />
+    <div id="fifteen_container">
+      <div class="second_inner_container">
+        <div>
+          <p></p>
+          <p>Beauty Expert Consultations</p>
+          <p>
+            Our Bluemercury team is once again able to apply your makeup! Call
+            your local store for more information.
+          </p>
+          <a href="#">FIND YOUR STORE</a>
+        </div>
+        <div>
+          <i class="arrow right"></i>
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/beauty-expert-consultations-step_400x400.gif?v=1621906763"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="sixteen_container">
+      <div class="inner_container">
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/offers-promo-curbside_400x400.jpg?v=1611351631"
+          />
+        </div>
+        <div>
+          <i class="arrow left"></i>
+        </div>
+        <div>
+          <p></p>
+          <p>Curbside Pickup</p>
+          <p>
+            Call your local store to place an order for contactless curbside
+            pickup. When you arrive your order will be placed directly in your
+            car. Beauty Expert advice is just a phone call away!
+          </p>
+          <a href="#">LEARN MORE</a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="seventeenth_container">
+      <div class="second_inner_container">
+        <div>
+          <p></p>
+          <p>Free Shipping & Returns</p>
+          <p>
+            In order to provide you with a shopping experience that you're
+            comfortable with, we're happy to offer free shipping for any phone
+            orders placed with a store.
+          </p>
+          <a href="#">CALL YOUR STORE</a>
+        </div>
+        <div>
+          <i class="arrow right"></i>
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/offers-promo-free_overnight_53821f76-19d4-4d4c-a95a-48f677a2d9a2_400x400.jpg?v=1611351653"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="eighteenth_container">
+      <div class="inner_container">
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/offers-promo-free_samples_f37ba5fe-5a08-46ec-abc2-22c92c6dfd78_400x400.jpg?v=1611351664"
+          />
+        </div>
+        <div>
+          <i class="arrow left"></i>
+        </div>
+        <div>
+          <p></p>
+          <p>Free Samples</p>
+          <p>
+            Sample packettes are provided to our clients as a way to test out
+            new product. Come visit and see what we have to offer.
+          </p>
+          <a href="#">FIND YOUR STORE</a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="nineteenth_container">
+      <div class="second_inner_container">
+        <div>
+          <p></p>
+          <p>Gift Wrapping</p>
+          <p>
+            We'll handle the gift wrap, so you'll have one less thing to think
+            about.
+          </p>
+          <a href="#"></a>
+        </div>
+        <div>
+          <i class="arrow right"></i>
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/offer-promo-gift_wrapping_92ff94bc-b089-4601-b9b6-4ba5f1e11716_400x400.jpg?v=1611351674"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <hr />
+    <div id="footer" style="margin-left: 300px">
+      <div id="f_cont">
+        <div>
+          <p>Get Expert Beauty Insight & Offers</p>
+          <div>
+            <input type="text" placeholder="EMAIL ADDRESS" />
+          </div>
+          <p>
+            To learn more about how we use your information and your rights, see
+            <span style="text-decoration: underline">Privacy Note</span>
+          </p>
+          <div id="icons">
+            <img src="https://img.icons8.com/metro/452/twitter.png" alt="" />
+            <img
+              src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png"
+              alt=""
+            />
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"
+              alt=""
+            />
+            <img
+              src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg"
+              alt=""
+            />
+            <img
+              src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+              alt=""
+            />
+          </div>
+          <p>Copyright 2021 bluemercury.All Right Reserved</p>
+        </div>
+        <div>
+          <div>
+            <div class="fh">BLUEMERCURY</div>
+            <div>Our Company</div>
+            <div>Store Locator</div>
+            <div>In-Store & Online Events</div>
+            <div>Press</div>
+            <div>Careers</div>
+            <div>Vendor Submissions</div>
+            <div>Diversity & Inclusion</div>
+          </div>
+          <div>
+            <div class="fh">MY ACCOUNT</div>
+            <div>My Account</div>
+            <div>BlueRewards</div>
+            <div>Gift Card Balance Checker</div>
+          </div>
+          <div>
+            <div class="fh">CUSTOMER SERVICE</div>
+            <div>Contact Us</div>
+            <div>Help & FAQ</div>
+            <div>Shipping,Return & Exchanges</div>
+            <div>Gift Cards</div>
+            <div>Offers & Promotions</div>
+            <div>Kiarna</div>
+          </div>
+          <div>
+            <div class="fh">Resources</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy Policy</div>
+            <div>Accessibility</div>
+            <div>COVID-19 Updates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../javascript/events.js"></script>
+<script>
+  
+</script>

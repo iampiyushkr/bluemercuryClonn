@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/8640696f0c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/viewbag.css" />
+  </head>
+  <body>
+    <!-- ----------header----------- -->
+    <div class="header-list">
+      <div
+        class="header-list-menu"
+        style="font-size: 14px; letter-spacing: 1px"
+      >
+        <i class="far fa-heart" id="myBtn" style="word-spacing: 10px"
+          ><span>WHISLIST</span></i
+        >
+        <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+        <i class="far fa-user-circle" onclick="signup()" id="signup"
+          ><span>SIGN/UP</span></i
+        >
+        <i class="fas fa-shopping-bag"><span>BAG</span></i>
+      </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Whislist</h2>
+          <hr />
+        </div>
+        <div class="modal-body"></div>
+        <!-- <div class="modal-footer">
+          <hr />
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421"
+      />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">SHOP</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="new1()">NEW!</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="brands()">BRANDS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">WELLNESS</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="shop_All.html">SKINCARE</a>
+              <a href="shop_All.html">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="shop_All.html">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="explore()">EXPLORE</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="events()">EVENTS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="bluewards()">BLUEWARDS</button>
+        </div>
+      </div>
+    </div>
+    <div class="slidediv">
+      <h2 id="slideh"></h2>
+    </div>
+
+    <div id="mainDiv">
+      <p style="font-size: 30px; color: #12284c">YOUR BAG</p>
+      <div id="div1">
+        <div id="inDiv1">
+          <div>
+            <p>BLUREWARDS</p>
+          </div>
+          <div id="inDiv2">
+            <p>
+              FREE GROUND SHIPPING AND FREE TWO-DAY SHIPPING WHEN YOU SPEND $150
+            </p>
+          </div>
+        </div>
+        <div id="inDiv3">
+          <div>
+            <u>Login in</u>
+          </div>
+          <div id="inDiv4">
+            <button>Join Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="div2">
+        <p style="font-size: 25px; color: #12284c" id="item"></p>
+        <input style="margin-right: 10px" s type="checkbox" id="gift" />
+        <label for="gift">Is this order a gift ?</label>
+        <p style="margin-left: 30px; color: gray">
+          The price of your order will be hidden on the gift receipt.
+        </p>
+      </div>
+      <div class="div3">
+        <div>
+          <p>Ready to ship</p>
+          <p>price</p>
+        </div>
+        <div>
+          <p>Quantity</p>
+          <p>Total</p>
+        </div>
+      </div>
+      <div id="div4"></div>
+
+      <div style="text-align: right" id="div6">
+        <div style="margin-left: 700px" id="div6In1">
+          <img
+            src="data:image/png;base64,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"
+          />
+          <p>Your Order Qualifies For Free Ground Shipping!</p>
+        </div>
+        <p style="font-size: 20px; color: #12284c" id="totalPrice"></p>
+        <p style="font-size: 15px; color: gray">
+          Shipping, Taxes, Beauty Cards, and additional discounts applied at
+          checkout
+        </p>
+        <button id="checkOut" onclick="checkout1()">CHECKOUT</button>
+        <div>
+          <button id="payPal">
+            <img
+              style="width: 150px; height: 40px"
+              src="http://legacyrivertrips.com/wp-content/uploads/2018/08/paypal-logo.jpg"
+            />
+          </button>
+        </div>
+        <div
+          style="
+            margin-left: 730px;
+            width: 370px;
+            height: 55px;
+            border: 1px solid black;
+            text-align: center;
+            margin-top: 10px;
+          "
+        >
+          <p style="font-size: 15px">
+            Pay as low as $141/mo. Klarna. See if you're prequalified
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        width: 99%;
+        height: 1px;
+        background-color: #c4c4c4;
+        margin: auto;
+        margin-top: 30px;
+        top: 610px;
+      "
+    ></div>
+
+    <div id="footer" style="height: 300px">
+      <div id="f_cont" style="letter-spacing: 0.5px; color: rgb(173, 163, 171)">
+        <div>
+          <p>Get Expert Beauty Insight & Offers</p>
+          <div>
+            <input type="text" placeholder="EMAIL ADDRESS &#8594;" />
+          </div>
+          <p>
+            To learn more about how we use your information and your rights, see
+            <span style="text-decoration: underline">Privacy Note</span>
+          </p>
+          <div id="icons">
+            <img src="https://img.icons8.com/metro/452/twitter.png" alt="" />
+            <img
+              src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png"
+              alt=""
+            />
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"
+              alt=""
+            />
+            <img
+              src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg"
+              alt=""
+            />
+            <img
+              src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+              alt=""
+            />
+          </div>
+          <p>Copyright 2021 bluemercury.All Right Reserved</p>
+        </div>
+        <div>
+          <div>
+            <div class="fh">BLUEMERCURY</div>
+            <div>Our Company</div>
+            <div>Store Locator</div>
+            <div>In-Store & Online Events</div>
+            <div>Press</div>
+            <div>Careers</div>
+            <div>Vendor Submissions</div>
+            <div>Diversity & Inclusion</div>
+          </div>
+          <div>
+            <div class="fh">MY ACCOUNT</div>
+            <div>My Account</div>
+            <div>BlueRewards</div>
+            <div>Gift Card Balance Checker</div>
+          </div>
+          <div>
+            <div class="fh">CUSTOMER SERVICE</div>
+            <div>Contact Us</div>
+            <div>Help & FAQ</div>
+            <div>Shipping,Return & Exchanges</div>
+            <div>Gift Cards</div>
+            <div>Offers & Promotions</div>
+            <div>Kiarna</div>
+          </div>
+          <div>
+            <div class="fh">Resources</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy Policy</div>
+            <div>Accessibility</div>
+            <div>COVID-19 Updates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../javascript/viewbag.js"></script>
+<script></script>

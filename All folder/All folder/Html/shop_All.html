@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/8640696f0c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/shop-all.css" />
+  </head>
+
+  <body>
+    <!-- ----------header----------- -->
+    <div class="header-list">
+      <div class="header-list-menu">
+        <i class="far fa-heart" id="myBtn" style="word-spacing: 10px"
+          ><span>WHISLIST</span></i
+        >
+        <i class="fas fa-search" onclick="search()"><span>SEARCH</span></i>
+        <i class="far fa-user-circle" onclick="signup()" id="signup"
+          ><span>SIGN/UP</span></i
+        >
+        <i class="fas fa-shopping-bag"><span>BAG</span></i>
+      </div>
+    </div>
+
+    <!-- -------------Modal----------- -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" style="overflow: scroll">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Whislist</h2>
+          <hr />
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <div class="navbar-image" style="padding-top: 30px">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x.png?v=1588538421"
+      />
+    </div>
+
+    <!-- ------------below navbar---------------- -->
+    <div class="navbar-div">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">SHOP</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="#">SKINCARE</a>
+              <a href="#">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="#">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="new1()">NEW!</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="brands()">BRANDS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">WELLNESS</button>
+          <div class="dropdown-content">
+            <div style="width: 50%; float: left">
+              <a href="#">SKINCARE</a>
+              <a href="#">BATH & BODY</a>
+              <a href="#">MAKEUP</a>
+              <a href="#">HAIR</a>
+              <a href="#">SUN-TAN</a>
+              <a href="#">SCIENCE & TECHNOLOGY</a>
+              <a href="#">TOOLS</a>
+              <a href="#">ACCESSORIES</a>
+              <a href="#">BEST SELLERS</a>
+            </div>
+            <div style="width: 50%; float: left; line-height: 10px">
+              <a href="#">SHOP ALL</a>
+              <a href="#">BEAUTY ACCESSORIES</a>
+              <a href="#">CLEANERS</a>
+              <a href="#">MASKS</a>
+              <a href="#">MOUSTERIZERS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="explore()">EXPLORE</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="events()">EVENTS</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="bluewards()">BLUEWARDS</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slidediv">
+      <h2 id="slideh"></h2>
+    </div>
+
+    <div id="topDiv">
+      <p
+        style="margin-left: 260px; cursor: pointer; font-size: 14px"
+        onclick="home1()"
+      >
+        Home
+      </p>
+      <p style="cursor: pointer; font-size: 14px">› Skin care</p>
+    </div>
+    <div id="mainDiv">
+      <div id="leftDiv">
+        <div class="smallTopDiv4" id="smallTopDiv2">
+          <div>
+            <p>SKIN CARE CATEGORY</p>
+
+            <span
+              style="
+                margin-left: 70px;
+                margin-top: 15px;
+                font-size: 25px;
+                font-weight: bold;
+                color: gray;
+              "
+              id="sign"
+              >+</span
+            >
+          </div>
+          <p>Select One to narrow results</p>
+        </div>
+        <div
+          style="color: #12284c; padding-top: 10px"
+          id="smallLeftDiv1Extention"
+        ></div>
+        <div id="smallTopDiv3">
+          <p>FILTER SKIN CARE BY</p>
+        </div>
+        <div class="smallTopDiv4" id="smallTopDiv4">
+          <div>
+            <p>Type</p>
+
+            <span
+              style="
+                margin-left: 225px;
+                margin-top: 15px;
+                font-size: 25px;
+                font-weight: bold;
+                color: gray;
+              "
+              id="sign1"
+              >+</span
+            >
+          </div>
+          <p>60 available</p>
+        </div>
+        <div
+          style="color: #12284c; padding-top: 10px"
+          id="smallLeftDiv3Extention"
+        ></div>
+        <div class="smallTopDiv4" id="smallTopDiv5">
+          <div>
+            <p>Brand</p>
+            <span
+              style="
+                margin-left: 215px;
+                margin-top: 15px;
+                font-size: 25px;
+                font-weight: bold;
+                color: gray;
+              "
+              id="sign2"
+              >+</span
+            >
+          </div>
+          <p>111 available</p>
+        </div>
+        <div
+          style="color: #12284c; padding-top: 10px"
+          id="smallLeftDiv4Extention"
+        ></div>
+        <div class="smallTopDiv4" id="smallTopDiv6">
+          <div>
+            <p>Shop By</p>
+            <span
+              style="
+                margin-left: 195px;
+                margin-top: 15px;
+                font-size: 25px;
+                font-weight: bold;
+                color: gray;
+              "
+              id="sign3"
+              >+</span
+            >
+          </div>
+          <p>4 available</p>
+        </div>
+        <div
+          style="color: #12284c; padding-top: 10px"
+          id="smallLeftDiv5Extention"
+        ></div>
+        <div class="smallTopDiv4" id="smallTopDiv7">
+          <div>
+            <p>Conscious Beauty</p>
+            <span
+              style="
+                margin-left: 130px;
+                margin-top: 15px;
+                font-size: 25px;
+                font-weight: bold;
+                color: gray;
+              "
+              id="sign4"
+              >+</span
+            >
+          </div>
+          <p>4 available</p>
+        </div>
+        <div
+          style="color: #12284c; padding-top: 10px"
+          id="smallLeftDiv6Extention"
+        ></div>
+      </div>
+
+      <div id="rightDiv">
+        <div
+          style="border-bottom: 1px solid lightgray; margin-top: -9px"
+          id="largeTopDiv2"
+        >
+          <p>SKIN CARE</p>
+          <div>
+            <div>
+              <p>SORT BY</p>
+            </div>
+            <div>
+              <p
+                style="
+                  margin-left: 10px;
+                  font-size: 16px;
+                  margin-top: 12px;
+                  float: left;
+                "
+              >
+                Feature
+              </p>
+              <div
+                class="dropdown1"
+                style="
+                  margin-left: 80px;
+                  cursor: pointer;
+                  float: left;
+                  margin-top: 8px;
+                  margin-right: 0px;
+                  border: 1px solid white;
+                  background-color: white;
+                "
+              >
+                <button class="dropbtn1" style="cursor: pointer">
+                  <i class="fa fa-angle-down" style="font-size: 24px"></i>
+                </button>
+                <div class="dropdown-content1">
+                  <button onclick="sorthl()">
+                    Sort by price (high to low)
+                  </button>
+                  <button onclick="sortlh()">
+                    Sort by price (low to high)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="largeTopDiv3">
+          <p style="font-size: 14px">0 FILTERS APPLIED</p>
+          <div>
+            <div>
+              <p style="font-size: 14px; color: gray">
+                Show out of stock items
+              </p>
+            </div>
+            <div>
+              <label class="switch">
+                <input type="checkbox" placeholder="YES" checked />
+                <span class="slider round"></span>
+              </label>
+
+              <div>
+                <p>1705 results</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="largeTopDiv4"></div>
+      </div>
+    </div>
+
+    <div
+      style="
+        width: 99%;
+        height: 1px;
+        background-color: #c4c4c4;
+        margin: auto;
+        margin-top: 30px;
+      "
+    ></div>
+
+    <!-- -----------footer-------- -->
+
+    <div id="footer">
+      <div id="f_cont" style="letter-spacing: 0.5px; color: rgb(173, 163, 171)">
+        <div>
+          <p>Get Expert Beauty Insight & Offers</p>
+          <div>
+            <input type="text" placeholder="EMAIL ADDRESS &#8594;" />
+          </div>
+          <p>
+            To learn more about how we use your information and your rights, see
+            <span style="text-decoration: underline">Privacy Note</span>
+          </p>
+          <div id="icons">
+            <img src="https://img.icons8.com/metro/452/twitter.png" alt="" />
+            <img
+              src="https://www.freeiconspng.com/thumbs/pinterest-logo-icon/pinterest-icon-black-2.png"
+              alt=""
+            />
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"
+              alt=""
+            />
+            <img
+              src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg"
+              alt=""
+            />
+            <img
+              src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+              alt=""
+            />
+          </div>
+          <p>Copyright 2021 bluemercury.All Right Reserved</p>
+        </div>
+        <div>
+          <div>
+            <div class="fh">BLUEMERCURY</div>
+            <div>Our Company</div>
+            <div>Store Locator</div>
+            <div>In-Store & Online Events</div>
+            <div>Press</div>
+            <div>Careers</div>
+            <div>Vendor Submissions</div>
+            <div>Diversity & Inclusion</div>
+          </div>
+          <div>
+            <div class="fh">MY ACCOUNT</div>
+            <div>My Account</div>
+            <div>BlueRewards</div>
+            <div>Gift Card Balance Checker</div>
+          </div>
+          <div>
+            <div class="fh">CUSTOMER SERVICE</div>
+            <div>Contact Us</div>
+            <div>Help & FAQ</div>
+            <div>Shipping,Return & Exchanges</div>
+            <div>Gift Cards</div>
+            <div>Offers & Promotions</div>
+            <div>Kiarna</div>
+          </div>
+          <div>
+            <div class="fh">Resources</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy Policy</div>
+            <div>Accessibility</div>
+            <div>COVID-19 Updates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../javascript/shopall.js"></script>
+<script></script>
